@@ -8,7 +8,7 @@ const NavBar = () => {
             
             <ul className='items'>
             <h1>Logo</h1>
-            <img src={`/assets/logo.png`} alt="imagen logo" />
+            <img src="./build/assets/logo.png" alt="imagen logo" />
             <li>
                 <button className="boton">Nosotros</button>
             </li>
