@@ -1,0 +1,17 @@
+.items{
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    background-color: #61dafb;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+  
+  }
+  .boton{
+    height: 50px;
+    background-color: #61dafb;
+    border-style: none;
+    
+  }
