@@ -1,8 +1,7 @@
 import {useState} from 'react'
-import './ItemProduct.scss'
+import './Item.scss'
 
-
-const ItemProduct = ({data}) => {
+const Item = ({data}) => {
     const {title, precio, imagen, stock, action} = data
 
     const [contador, setContador] = useState(1)
@@ -41,5 +40,4 @@ const ItemProduct = ({data}) => {
     )
 
 }
-
-export default ItemProduct
+export default Item
