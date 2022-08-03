@@ -1,10 +1,10 @@
 
 import './ItemProduct.scss'
 import ItemCount from '../ItemCount/ItemCount'
-import {Link} from 'react-router-dom'
+
 
 const ItemProduct = ({data}) => {
-    const {title, precio, imagen, stock, action} = data
+    const {title, precio, imagen, stock, id} = data
     const onAdd = (contador) => {
         alert(`Agregaste ${contador} productos`);
       };

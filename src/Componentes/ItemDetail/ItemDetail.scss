@@ -5,6 +5,9 @@
     display: flex;
     flex-direction: row;
     padding-left: 20%;
+    font-size: 2rem;
+    text-align: center;
+    gap: 20px;
     .columnaCuadros{
         padding-top: 5%;
         .fotoChica{
@@ -28,10 +31,24 @@
         align-items: center;
         align-self: center;
         justify-content: center;
-        
-        
+        img{
+            width: 100%;
+        }
+        .botonDetalle{
+            margin-top: 10%;
+            align-self: center;
+            font-size: large;
+            background-color: rgb(9, 145, 81);
+            width: 160px;
+            height: 40px;
+            font-weight: 600;
+            
+        }
+        display: flex;
+        flex-direction: column;
 
     }
+    
 
     
 }
