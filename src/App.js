@@ -1,30 +1,39 @@
 
 import './App.css';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './Componentes/ItemDetailContainer/ItemDetailContainer';
 
 import NavBar from './Componentes/NavBar/NavBar';
-
+import Home from './pages/Home';
+import Contacto from './pages/Contacto';
+import Nosotros from './pages/Nosotros';
+import Productos from './pages/Productos';
+import Details from './pages/Details';
 
 
 
 function App() {
   return (
-    <div className="App">
-        <NavBar/>
-       
-        <h2>Productos</h2>
-        <div className='container'>
-          <div className='ItemListContainer'>
-            <ItemListContainer />
-           
-          </div>
-          
-          
-        </div>
-    </div>
+    <BrowserRouter>
       
+          <NavBar/>
+          <Routes>
+            <Route path='/' element={
+              <Home />
+            } />
+            <Route path='/nosotros' element={<Nosotros />} />
+            <Route path='/contacto' element={<Contacto />} />
+            <Route path='/productos' element={<Productos />} />
+            <Route path='/:productos/:id' element={<Details />} />
+            <Route path='*' element={<h1>Error 404- not found</h1>} />
+            
+          
+            
+          </Routes>
+      
+    </BrowserRouter>
     
   );
 }

@@ -1,0 +1,14 @@
+
+.countProd{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(73, 33, 71);
+    width: 180px;
+    justify-content: center;
+    color: white;
+    .contenedorCount{
+        flex-direction: row;
+    }
+
+}

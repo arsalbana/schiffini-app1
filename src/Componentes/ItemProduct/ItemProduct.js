@@ -1,26 +1,14 @@
-import {useState} from 'react'
-import './ItemProduct.scss'
 
+import './ItemProduct.scss'
+import ItemCount from '../ItemCount/ItemCount'
+import {Link} from 'react-router-dom'
 
 const ItemProduct = ({data}) => {
     const {title, precio, imagen, stock, action} = data
-
-    const [contador, setContador] = useState(1)
-    const addNumber = () => {
-        
-        if (contador < 4){
-        setContador(contador + 1)
-        }
-        else {
-            alert("no hay más stock")
-        }
-    }
-    const lessNumber = () => {
-        if (contador > 0){
-        setContador(contador - 1)
-        }
-        
-    }  
+    const onAdd = (contador) => {
+        alert(`Agregaste ${contador} productos`);
+      };
+    
     
     return(
         <div className='item'>
@@ -28,13 +16,8 @@ const ItemProduct = ({data}) => {
                 <img className='imagenes' src={imagen} alt="imagen" />
                 <p>{title}</p>
                 <span>{precio}</span>
-                <p>{stock}</p>
-                <div className='countProd'>
-                    <button onClick={lessNumber}>-</button>
-                    <p>{contador}</p>
-                    <button onClick={addNumber}>+</button>
-                </div>
-                <button onClick={action}>Comprar</button>
+                <ItemCount onAdd={onAdd} initial={1} stock={4} />
+                
             </div>
             
         </div>
