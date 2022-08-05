@@ -2,7 +2,12 @@ import React from 'react';
 import './ItemDetail.scss';
 import {useState } from "react"
 import ItemProduct from '../ItemProduct/ItemProduct';
-import image from "../../image/papas.jpg"
+import image from "../../image/papas con cheddar zoom.png"
+import image1 from "../../image/papas con cheddarotra.png"
+import image2 from "../../image/verdeo.png"
+import image3 from "../../image/panceta.png"
+import image4 from "../../image/cheddar2.png"
+
 
 
 
@@ -34,10 +39,10 @@ const ItemDetail= (data) => {
             <div className='itemDetail'>
                 <div className='columnaCuadros'>
                     <div className='fotoChica'><img className='imagenes' src={image} alt="imagen" /></div>
-                    <div className='fotoChica'><img className='imagenes' src={image} alt="imagen" /></div>
-                    <div className='fotoChica'><img className='imagenes' src={image} alt="imagen" /></div>
-                    <div className='fotoChica'><img className='imagenes' src={image} alt="imagen" /></div>
-                    <div className='fotoChica'><img className='imagenes' src={image} alt="imagen" /></div>
+                    <div className='fotoChica'><img className='imagenes' src={image1} alt="imagen" /></div>
+                    <div className='fotoChica'><img className='imagenes' src={image2} alt="imagen" /></div>
+                    <div className='fotoChica'><img className='imagenes' src={image3} alt="imagen" /></div>
+                    <div className='fotoChica'><img className='imagenes' src={image4} alt="imagen" /></div>
                 </div>
                 
                 
