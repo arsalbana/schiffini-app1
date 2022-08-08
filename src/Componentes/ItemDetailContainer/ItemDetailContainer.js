@@ -2,34 +2,38 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import React from 'react';
 import products from "../../utils/products.mock";
 import { useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom"
 
 
 
 
 const ItemDetailContainer= () => {
-    
-    console.log('productos desde detalle', products)
-    console.log('useParams: ', useParams())
     const {id, category} = useParams ()
-    console.log("id parametro: ", id, 'categoria de parametro:', category)
+    
+    const [productData, setProductData] = useState({})
+ 
     useEffect ( () =>{
-        products.some( (product) => {
-            if(product.id === 2) {
-                console.log("producto filtrado ", product)
-                return (
-                    
-                    product
-                )
+        
+       filterById()     
+        
+    }, [])
+    const filterById = () =>{
+        products.some((product) => {
+            if(product.id == id){
+                setProductData(product)
+                console.log("filtrado" , product)
             }
         })
-        
-    })
+    }
     return (
         <div className="container">
+            
             <div className="itemDetail">
-                <ItemDetail />
-            </div>  
+            <ItemDetail data={productData} />
+
+            </div>
+            
         </div>
           
        

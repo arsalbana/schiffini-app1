@@ -1,6 +1,7 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import './NavBar.css';
-import {Link} from 'react-router-dom'
+import './NavBar.scss';
+import {Link} from 'react-router-dom';
+import image from "../../image/logo burgourmet.png"
 
 
 const NavBar = () => {
@@ -9,7 +10,7 @@ const NavBar = () => {
         <div className='nav'>
             
             <ul className='items'>
-            <h1>Logo</h1>
+            <Link to='/'> <div className='logo'><img className='logob' src={image} alt='imagenLogo'/> <p className="textoLogo">Burgourmet</p></div></Link>
             
             
             <Link to='/Nosotros'><li>

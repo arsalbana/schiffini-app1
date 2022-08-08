@@ -2,6 +2,7 @@
 import ItemList from "../ItemList/ItemList"
 import {useState } from "react"
 import products from "../../utils/products.mock"
+import '../ItemProduct/ItemProduct.scss'
 
 
 const ItemListContainer = () => {
