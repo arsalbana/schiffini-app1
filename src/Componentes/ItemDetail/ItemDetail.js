@@ -4,7 +4,7 @@ import './ItemDetail.scss';
 import ItemCount from '../ItemCount/ItemCount';
 
 function ItemDetail({data}) {
-    
+    const {title, precio, imagen, stock, id, image, image1, image2, image3, image4} = data
 
     const onAdd = (contador) => {
         alert(`Agregaste ${contador} productos`);
@@ -17,21 +17,21 @@ function ItemDetail({data}) {
         <div className='itemDetail'>
 
             <div className='columnaCuadros'>
-                <div className='fotoChica'><img className='imagenes' src={`./image/${data.image}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`./image/${data.image1}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`./image/${data.image2}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`./image/${data.image3}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`./image/${data.image4}`} alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`./public/${image}`} alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`/public/${image1}`} alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`/public/${image2}`} alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`/public/${image3}`} alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`/public/${image4}`} alt="imagen" /></div>
             </div>
 
 
             <div className='itemDetail1'>
 
-                <img className='imagenes' src={`./image/${data.imagen}`} alt="imagen" />
+                <img className='imagenes' src={`/public/${imagen}`} alt="imagen" />
             </div> 
             <div className='info'>   
-                <p>{data.title}</p>
-                <span>${data.precio}</span>
+                <p>{title}</p>
+                <span>${precio}</span>
                 <ItemCount onAdd={onAdd} initial={1} stock={4} />
 
 

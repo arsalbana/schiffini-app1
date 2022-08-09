@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 const ItemProduct = ({data}) => {
     const {title, precio, imagen, stock, id, image, image1, image2, image3, image4} = data
     const onAdd = (contador) => {
-        alert(`Agregaste ${contador} productos`);
+        alert(`Agregaste: ${contador} productos`);
       };
     
     
@@ -15,6 +15,7 @@ const ItemProduct = ({data}) => {
         <Link to={`/productos/${id}`}><div className='item'>
             <div className='item1'>
                 <img className='imagenes' src={imagen} alt="imagen" />
+                
                 <p>{title}</p>
                 <span>{precio}</span>
                 <ItemCount onAdd={onAdd} initial={1} stock={4} />

@@ -4,7 +4,7 @@ import './ItemProduct.scss'
 import ItemCount from '../ItemCount/ItemCount'
 
 const Item = ({data}) => {
-    const {title, precio, imagen, stock, id} = data
+    const {title, precio, imagen, image1, image2, image3, image4, image, stock, id} = data
     const onAdd = (contador) => {
         alert(`Agregaste ${contador} productos`);
       };
