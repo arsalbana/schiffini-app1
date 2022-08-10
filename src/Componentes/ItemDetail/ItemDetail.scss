@@ -1,57 +1,66 @@
 .itemDetail{
     width: 100%;
     height: auto;
-    background-color: rgb(0, 122, 106);
+    background-color: rgb(192, 245, 238);
     display: flex;
     flex-direction: row;
-    padding-left: 10%;
+    padding-left: 5%;
     font-size: 2rem;
     text-align: center;
+    
+    
+    .itemDetail1{
+        width: 250px;
+        height: auto;
+        margin: 1.5%;
+        background-color: rgb(194, 255, 247);
+        
+        
+        
+        
+        img{
+            width: 100%;
+        }
+       
+        display: flex;
+        flex-direction: column;
+
+    }
     .info{
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 20px;
+        padding: 5%;
+        height: 100%;
     }
     
     .columnaCuadros{
         padding-top: 1%;
         .fotoChica{
-            width: 30%;
+            width: 12%;
             height: auto;
             background-color: aquamarine;
-            align-self: center;
             display: flex;
             flex-direction: column;
-            margin: 2%;
+            margin: 1%;
+            margin-left: 70%;
         }
 
     }
-    
-   
-    .itemDetail1{
-        width: 400px;
-        height: auto;
-        margin: 2%;
-        background-color: rgb(194, 255, 247);
-        
-        img{
-            width: 100%;
+    .countProd{
+        padding: 10%;
+        .contenedorCount{
+            padding: 2%;
         }
-        .botonDetalle{
-            margin-top: 10%;
-            align-self: center;
-            font-size: large;
-            background-color: rgb(255, 255, 255);
-            width: 160px;
-            height: 40px;
-            font-weight: 600;
-            
-        }
-        display: flex;
-        flex-direction: column;
-
     }
-    
-
-    
+    .buttonPrimary{
+        align-self: center;
+        font-size: 16px;
+        background-color: rgb(255, 255, 255);
+        width: 160px;
+        height: 30px;
+        font-weight: 500;
+        margin: 5%;
+    }
 }

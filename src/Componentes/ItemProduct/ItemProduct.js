@@ -16,6 +16,7 @@ const ItemProduct = ({data}) => {
             <div className='item1'>
                 <img className='imagenes' src={imagen} alt="imagen" />
                 
+            
                 <p>{title}</p>
                 <span>{precio}</span>
                 <ItemCount onAdd={onAdd} initial={1} stock={4} />

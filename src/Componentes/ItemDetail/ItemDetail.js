@@ -3,7 +3,7 @@ import './ItemDetail.scss';
 
 import ItemCount from '../ItemCount/ItemCount';
 
-function ItemDetail({data}) {
+const ItemDetail = ({data})  => {
     const {title, precio, imagen, stock, id, image, image1, image2, image3, image4} = data
 
     const onAdd = (contador) => {
@@ -17,17 +17,17 @@ function ItemDetail({data}) {
         <div className='itemDetail'>
 
             <div className='columnaCuadros'>
-                <div className='fotoChica'><img className='imagenes' src={`./public/${image}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`/public/${image1}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`/public/${image2}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`/public/${image3}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`/public/${image4}`} alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`/assets/${image}`}alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`/assets/${image1}`} alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`/assets/${image2}`} alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`/assets/${image3}`} alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`/assets/${image4}`} alt="imagen" /></div>
             </div>
 
 
             <div className='itemDetail1'>
 
-                <img className='imagenes' src={`/public/${imagen}`} alt="imagen" />
+                <img className='imagenes' src={`/assets/${image}`} alt="imagen" />
             </div> 
             <div className='info'>   
                 <p>{title}</p>
