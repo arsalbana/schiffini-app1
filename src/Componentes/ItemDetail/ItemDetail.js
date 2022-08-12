@@ -38,7 +38,7 @@ const ItemDetail = ({data})  => {
                 <span>${precio}</span>
                 
                 <ItemCount onAdd={onAdd} initial={1} stock={4}  setCantidadSeleccionada={setCantidadSeleccionada} productData={data} />
-                <button><Link to="/cart">Finalizar compra</Link></button>
+                <button className="finalizar"><Link to="/cart">Finalizar compra</Link></button>
                 
 
 
