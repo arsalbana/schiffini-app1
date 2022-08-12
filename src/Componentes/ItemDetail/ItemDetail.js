@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemDetail.scss';
-
+import {Link} from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({data})  => {
     const {title, precio, imagen, stock, id, image, image1, image2, image3, image4} = data
 
+    const [cantidadSeleccionada, setCantidadSeleccionada] = useState()
+
     const onAdd = (contador) => {
+        
         alert(`Agregaste ${contador} productos`);
     };
+    
 
-
+    
 
     return (
 
@@ -32,14 +36,16 @@ const ItemDetail = ({data})  => {
             <div className='info'>   
                 <p>{title}</p>
                 <span>${precio}</span>
-                <ItemCount onAdd={onAdd} initial={1} stock={4} />
-
+                
+                <ItemCount onAdd={onAdd} initial={1} stock={4}  setCantidadSeleccionada={setCantidadSeleccionada} />
+                <button><Link to="/cart">Finalizar compra</Link></button>
+                
 
 
 
 
             </div>
-
+            {console.log("cant selecc ..", cantidadSeleccionada)}
 
         </div>
     );

@@ -2,9 +2,13 @@ import React from 'react';
 import { useState } from 'react';
 import './ItemCount.scss';
 
-const ItemCount = ({ onAdd, initial, stock }) => {
+const ItemCount = ({ stock, initial, setCantidadSeleccionada }) => {
     
- 
+  const onAdd = () => {
+    console.log("Agregar al carrito: ", setCantidadSeleccionada)
+    
+    setCantidadSeleccionada(contador)
+}
   const [contador, setContador] = useState(initial);
 
   const addNumber = (num) => {
@@ -37,6 +41,7 @@ const ItemCount = ({ onAdd, initial, stock }) => {
         className="buttonPrimary"
         onClick={() => {
           onAdd(contador);
+          
         }}
         disabled={stock === 0 ? true : null}
       >
