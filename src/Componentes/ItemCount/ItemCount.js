@@ -3,7 +3,8 @@ import { useState } from 'react';
 import './ItemCount.scss';
 
 const ItemCount = ({ stock, initial, setCantidadSeleccionada }) => {
-    
+
+  
   const onAdd = () => {
     console.log("Agregar al carrito: ", setCantidadSeleccionada)
     

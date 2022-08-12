@@ -9,7 +9,8 @@ const ItemProduct = ({data}) => {
     const onAdd = (contador) => {
         alert(`Agregaste: ${contador} productos`);
       };
-    
+
+
     
     return(
         <Link to={`/productos/${id}`}><div className='item'>
