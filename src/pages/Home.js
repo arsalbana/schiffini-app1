@@ -3,7 +3,7 @@ import '../Componentes/ItemProduct/ItemProduct.scss'
 const Home = () => {
     return (
         <>
-            <h2>Productos</h2>
+            
             <div className='container'>
                 <div className='ItemListContainer'>
                 <ItemListContainer />

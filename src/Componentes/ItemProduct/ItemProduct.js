@@ -23,8 +23,8 @@ const addToCart = (e) => {
             
                 <p>{title}</p>
                 <span>{precio}</span>
-                <ItemCount onAdd={onAdd} initial={1} stock={4} />
-                <button onClick={addToCart}>Añadir al carrito</button>
+                <ItemCount onAdd={onAdd} onClick={addToCart} initial={1} stock={4} />
+                
                 
             </div>
             

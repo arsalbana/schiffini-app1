@@ -56,11 +56,11 @@ const products = [
         precio:800 ,
         id: 5,
         imagen:'bondiola ppal.png',
-        image:'papas con cheddarotra.png',
-        image1:'papas con chedarotra.png',
-        image2:'verdeo.png',
+        image:'bondiola zoom.png',
+        image1:'bondiola.png',
+        image2:'huevo frito.png',
         image3:'panceta.png',
-        image4:'cheddar2.png',
+        image4:'salsa cheddar.png',
     } 
 ]
 export default products
