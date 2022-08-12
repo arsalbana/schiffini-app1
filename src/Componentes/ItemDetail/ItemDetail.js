@@ -37,7 +37,7 @@ const ItemDetail = ({data})  => {
                 <p>{title}</p>
                 <span>${precio}</span>
                 
-                <ItemCount onAdd={onAdd} initial={1} stock={4}  setCantidadSeleccionada={setCantidadSeleccionada} />
+                <ItemCount onAdd={onAdd} initial={1} stock={4}  setCantidadSeleccionada={setCantidadSeleccionada} productData={data} />
                 <button><Link to="/cart">Finalizar compra</Link></button>
                 
 

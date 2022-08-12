@@ -1,13 +1,16 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState , useContext } from 'react';
 import './ItemCount.scss';
+import { CartContext } from '../../Contexts/CartContext';
 
-const ItemCount = ({ stock, initial, setCantidadSeleccionada }) => {
-
-  
+const ItemCount = ({ stock, initial, setCantidadSeleccionada, productData }) => {
+ 
+  const {addProductToCart} = useContext(CartContext)
   const onAdd = () => {
     console.log("Agregar al carrito: ", setCantidadSeleccionada)
+    console.log("info producto", productData)
     
+    addProductToCart(productData)
     setCantidadSeleccionada(contador)
 }
   const [contador, setContador] = useState(initial);
@@ -46,7 +49,7 @@ const ItemCount = ({ stock, initial, setCantidadSeleccionada }) => {
         }}
         disabled={stock === 0 ? true : null}
       >
-        Comprar
+        Añadir al carrito
       </button>
     </div>
   );

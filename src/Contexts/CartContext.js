@@ -4,7 +4,9 @@ const CartContext = createContext()
 
 const CartProvider = ({children}) => {
     const [cartProducts, setCartProducts] = useState([])
+    console.log("mostrar cartproduct", cartProducts)
     const [totalProducts, setTotalProducts] = useState(0)
+    console.log("total productos", totalProducts)
 
     const addProductToCart = (product) => {
         let isInCart = cartProducts.find(cartItem => cartItem.id === product.id)
