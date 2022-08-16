@@ -1,18 +1,19 @@
-
+import { useContext } from 'react';
 import './ItemProduct.scss'
 import ItemCount from '../ItemCount/ItemCount'
 import {Link} from 'react-router-dom';
+import { CartContext } from '../../Contexts/CartContext';
 
-
-const ItemProduct = ({data}) => {
+const ItemProduct = ({data, action}) => {
     const {title, precio, imagen,  id} = data
+    const { handleClick, name } = useContext(CartContext)
     const onAdd = (contador) => {
         alert(`Agregaste: ${contador} productos`);
       };
 
-const addToCart = (e) => {
+const addProductToCart = (e) => {
     console.log("evento add to cart ", e)
-    e.stopPropagation ()
+    e.stopPropagation ();
 }
     
     return(
@@ -22,8 +23,8 @@ const addToCart = (e) => {
                 
             
                 <p>{title}</p>
-                <span>{precio}</span>
-                <ItemCount onAdd={onAdd} onClick={addToCart} initial={1} stock={4} />
+                <span onClick={addProductToCart}>$ {precio}</span>
+                <ItemCount onAdd={onAdd} onClick={addProductToCart} initial={1} stock={4} />
                 
                 
             </div>

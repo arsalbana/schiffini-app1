@@ -3,7 +3,7 @@ import './ItemDetail.scss';
 import {Link} from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 
-const ItemDetail = ({data})  => {
+const ItemDetail = ({data, setShowModal})  => {
     const {title, precio, imagen, stock, id, image, image1, image2, image3, image4} = data
 
     const [cantidadSeleccionada, setCantidadSeleccionada] = useState()
@@ -21,7 +21,8 @@ const ItemDetail = ({data})  => {
         <div className='itemDetail'>
 
             <div className='columnaCuadros'>
-                <div className='fotoChica'><img className='imagenes' src={`/assets/${image}`}alt="imagen" /></div>
+                <div className='fotoChica'><img className='imagenes' src={`/assets/${image}`}alt="imagen" onClick={() => setShowModal(true)} /></div>
+                
                 <div className='fotoChica'><img className='imagenes' src={`/assets/${image1}`} alt="imagen" /></div>
                 <div className='fotoChica'><img className='imagenes' src={`/assets/${image2}`} alt="imagen" /></div>
                 <div className='fotoChica'><img className='imagenes' src={`/assets/${image3}`} alt="imagen" /></div>

@@ -6,6 +6,7 @@ import { CartContext } from '../../Contexts/CartContext';
 const ItemCount = ({ stock, initial, setCantidadSeleccionada, productData }) => {
  
   const {addProductToCart} = useContext(CartContext)
+  
   const onAdd = () => {
     console.log("Agregar al carrito: ", setCantidadSeleccionada)
     console.log("info producto", productData)
@@ -18,6 +19,8 @@ const ItemCount = ({ stock, initial, setCantidadSeleccionada, productData }) => 
   const addNumber = (num) => {
     setContador(contador + num);
   };
+
+  
 
   return (
     <div className="countProd">
@@ -51,6 +54,7 @@ const ItemCount = ({ stock, initial, setCantidadSeleccionada, productData }) => 
       >
         Añadir al carrito
       </button>
+      
     </div>
   );
 };
