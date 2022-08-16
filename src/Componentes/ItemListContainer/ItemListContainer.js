@@ -5,6 +5,8 @@ import products from "../../utils/products.mock"
 import '../ItemProduct/ItemProduct.scss'
 
 
+
+
 const ItemListContainer = () => {
     const [listProducts, setListProducts] = useState([])
     const getProducts = new Promise( (resolve, reject) =>{
@@ -25,6 +27,7 @@ const ItemListContainer = () => {
     })
     return(
         <div className="item">
+            
             <ItemList dataProducts={listProducts} />
         </div>
     )
