@@ -9,6 +9,7 @@ import Contacto from './pages/Contacto';
 import Nosotros from './pages/Nosotros';
 import Productos from './pages/Productos';
 import Details from './pages/Details';
+import Checkout from './pages/Checkout';
 
 
 
@@ -27,6 +28,7 @@ function App() {
               <Route path='/contacto' element={<Contacto />} />
               <Route path='/productos' element={<Productos />} />
               <Route path='/:category/:id' element={<Details />} />
+              <Route path='/cart' element={<Checkout />}/>
               <Route path='*' element={<h1>Error 404- not found</h1>} />
               
             

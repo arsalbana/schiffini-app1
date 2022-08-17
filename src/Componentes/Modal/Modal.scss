@@ -22,7 +22,16 @@
     
 }
 .modal-custom img {
-    width: 100%;
+    width: 40%;
+    height: auto;
 }
 
+.cruz{
+    
+    position: fixed;
+    z-index: 1;
+    top: 0%;
+    left: 50%;
+    color: rgb(38, 189, 189);
 
+}

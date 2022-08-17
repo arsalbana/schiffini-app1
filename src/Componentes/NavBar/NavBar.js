@@ -2,6 +2,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './NavBar.scss';
 import {Link} from 'react-router-dom';
 import image from "../../image/logo burgourmet.png"
+import CartWidget from './CartWidget'
 
 
 const NavBar = () => {
@@ -22,9 +23,9 @@ const NavBar = () => {
             <Link to='/Contacto'><li>
                 <button className="boton">Contacto</button>
             </li></Link>
-            <Link to='/ShoppingCartIcon'><li>
-                <button><ShoppingCartIcon /></button>
-            </li></Link>
+            <li>
+                <button><CartWidget /></button>
+            </li>
             </ul>
             
             
