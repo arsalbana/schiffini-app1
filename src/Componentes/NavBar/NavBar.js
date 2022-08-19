@@ -1,4 +1,4 @@
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 import './NavBar.scss';
 import {Link} from 'react-router-dom';
 import image from "../../image/logo burgourmet.png"

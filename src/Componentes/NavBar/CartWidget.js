@@ -1,7 +1,6 @@
 import {useState , useContext} from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { CartContext } from '../../Contexts/CartContext';
 import './CartWidget.scss';
@@ -10,7 +9,7 @@ import './CartWidget.scss';
 const CartWidget = () => {
     const [anchorEl, setAnchorEl] = useState(null);
 
-    const { cartProducts, clear, deleteProduct, totalProducts } = useContext(CartContext)
+    const { cartProducts, clear, deleteProduct, totalProducts} = useContext(CartContext)
 
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -48,12 +47,17 @@ const CartWidget = () => {
                             <div className='CartProductDetail'>
                                 <p>$ {product.precio}</p>
                             </div>
+                            
+                            
                             <div className='CartProductAction' >
                                 <DeleteIcon onClick={() => deleteProduct(product)}/>
                             </div>
                         </div>
                     )
                 })}
+                <div className='CartProductDetail'>
+                                <p> Total Productos:  {totalProducts}</p>
+                            </div>
                 <button onClick={() => clear()} className={"btn-delete-all"}>Borrar todo</button>
             </Menu>
         </div>

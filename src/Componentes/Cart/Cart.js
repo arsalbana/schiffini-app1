@@ -1,14 +1,46 @@
-import { useContext } from "react"
-import { CartContext } from "../../Contexts/CartContext"
+import { CartContext } from '../../Contexts/CartContext';
+import { useContext} from 'react';
+import DeleteIcon from '@mui/icons-material/Delete';
+import '../../Componentes/NavBar/CartWidget.scss';
 
 const Cart = () => {
-    const { cartProducts } = useContext(CartContext)
+    
 
+    const { cartProducts, clear, deleteProduct, totalProducts} = useContext(CartContext)
 
+   
     return(
         <>
         <div>Carrito de checkout</div>
-        {console.log("cartProducts dede checkout: ",cartProducts)}
+        <div className='cart-widget' >
+           
+           
+                {cartProducts.map((product) => {
+                    return(
+                        <div className='CartProductIn' key={product.id}>
+                            <img src={`/assets/${product.image}`} alt="" />
+                            <div className='CartProductDetail'>
+                                <p>{product.title}</p>
+                                <p>Papas Fritas</p>
+                            </div>
+                            <div className='CartProductDetail'>
+                                <p>$ {product.precio}</p>
+                            </div>
+                            
+                            
+                            <div className='CartProductAction' >
+                                <DeleteIcon onClick={() => deleteProduct(product)}/>
+                            </div>
+                        </div>
+                    )
+                })}
+                <div className='CartProductDetail'>
+                                <p> Total Productos:  {totalProducts}</p>
+                </div>
+                <button onClick={() => clear()} className={"btn-delete-all"}>Terminar Compra</button>
+                
+            
+        </div>
         </>
     )
 }

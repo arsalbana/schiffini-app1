@@ -7,7 +7,7 @@ const CartProvider = ({children}) => {
     console.log("mostrar cartproduct", cartProducts)
     const [totalProducts, setTotalProducts] = useState(0)
     console.log("total productos", totalProducts)
-
+   
     const addProductToCart = (product) => {
         let isInCart = cartProducts.find(cartItem => cartItem.id === product.id)
         if(!isInCart) {
@@ -15,13 +15,18 @@ const CartProvider = ({children}) => {
             setTotalProducts(totalProducts + 1)
             return setCartProducts(cartProducts => [...cartProducts, product])
         }
+        if(isInCart) {
+            console.log("otro mproducto mas", product)
+            setTotalProducts(totalProducts + 2)
+            
+        }
     }
 
     const deleteProduct = (product) => {
         console.log("Producto a eliminar:", product)
         setCartProducts(cartProducts.filter( (cartProduct) => cartProduct.id !== product.id) )
     }
-
+    
     const clear = () => {
         setCartProducts([])
     }
@@ -32,7 +37,8 @@ const CartProvider = ({children}) => {
         deleteProduct,
         clear,
         addProductToCart,
-        totalProducts
+        totalProducts,
+       
     }
 
     return(
