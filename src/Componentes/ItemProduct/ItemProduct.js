@@ -1,12 +1,11 @@
-import { useContext } from 'react';
+
 import './ItemProduct.scss'
 import ItemCount from '../ItemCount/ItemCount'
 import {Link} from 'react-router-dom';
-import { CartContext } from '../../Contexts/CartContext';
 
-const ItemProduct = ({data, action}) => {
-    const {title, precio, imagen,  id} = data
-    const { handleClick, name } = useContext(CartContext)
+const ItemProduct = ({data}) => {
+    const {title, precio, imagen, id, stock} = data
+    
     const onAdd = (contador) => {
         alert(`Agregaste: ${contador} productos`);
       };
@@ -24,7 +23,7 @@ const addProductToCart = (e) => {
             
                 <p>{title}</p>
                 <span onClick={addProductToCart}>$ {precio}</span>
-                <ItemCount onAdd={onAdd} onClick={addProductToCart} initial={1} stock={4} />
+                <ItemCount onAdd={onAdd} onClick={addProductToCart} initial={1} stock={stock} />
                 
                 
             </div>

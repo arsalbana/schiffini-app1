@@ -3,7 +3,7 @@ import './ItemDetail.scss';
 import {Link} from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 
-const ItemDetail = ({data, setShowModal})  => {
+const ItemDetail = ({data, setShowModal, addProductToCart, productData})  => {
     const {title, precio, imagen, stock, id, image, image1, image2, image3, image4} = data
 
     const [cantidadSeleccionada, setCantidadSeleccionada] = useState()
@@ -11,6 +11,8 @@ const ItemDetail = ({data, setShowModal})  => {
     const onAdd = (contador) => {
         
         alert(`Agregaste ${contador} productos`);
+        addProductToCart(productData, contador)
+        setCantidadSeleccionada(setCantidadSeleccionada)
     };
     
 
@@ -38,7 +40,7 @@ const ItemDetail = ({data, setShowModal})  => {
                 <p>{title}</p>
                 <span>${precio}</span>
                 
-                <ItemCount onAdd={onAdd} initial={1} stock={4}  setCantidadSeleccionada={setCantidadSeleccionada} productData={data} />
+                <ItemCount onAdd={onAdd} initial={1} stock={stock}  setCantidadSeleccionada={setCantidadSeleccionada} productData={data} />
                 <button className="finalizar"><Link to="/cart">Finalizar compra</Link></button>
                 
 

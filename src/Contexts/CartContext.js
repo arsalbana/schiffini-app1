@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 
+
 const CartContext = createContext()
 
 const CartProvider = ({children}) => {
@@ -7,21 +8,21 @@ const CartProvider = ({children}) => {
     console.log("mostrar cartproduct", cartProducts)
     const [totalProducts, setTotalProducts] = useState(0)
     console.log("total productos", totalProducts)
-   
-    const addProductToCart = (product) => {
+    
+    const addProductToCart = (product, contador) => {
         let isInCart = cartProducts.find(cartItem => cartItem.id === product.id)
         if(!isInCart) {
-            console.log("se agrego el producto:", product)
+            console.log("se agrego el producto:", product.id)
             setTotalProducts(totalProducts + 1)
             return setCartProducts(cartProducts => [...cartProducts, product])
         }
         if(isInCart) {
             console.log("otro mproducto mas", product)
-            setTotalProducts(totalProducts + 2)
+            setTotalProducts(totalProducts + contador)
             
         }
     }
-
+    const [contador, setCantidadSeleccionada] = useState()
     const deleteProduct = (product) => {
         console.log("Producto a eliminar:", product)
         setCartProducts(cartProducts.filter( (cartProduct) => cartProduct.id !== product.id) )
@@ -29,6 +30,9 @@ const CartProvider = ({children}) => {
     
     const clear = () => {
         setCartProducts([])
+    }
+    const cantidad = () => {
+        setCantidadSeleccionada (contador)
     }
 
     const data = {
@@ -38,12 +42,16 @@ const CartProvider = ({children}) => {
         clear,
         addProductToCart,
         totalProducts,
+        cantidad
+        
        
     }
 
     return(
         <CartContext.Provider value={data}>
             {children}
+            
+            
         </CartContext.Provider>
     )
 }

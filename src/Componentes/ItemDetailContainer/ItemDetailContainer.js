@@ -25,10 +25,10 @@ const ItemDetailContainer= () => {
         
     }, [])
     const filterById = () =>{
-        products.find((product) => {
-            if(product.id == id){
-                setProductData(product)
-                console.log("filtrado" , product)
+        products.find((productData) => {
+            if(productData.id == id){
+                setProductData(productData)
+                console.log("filtrado" , productData)
             }
         })
     }

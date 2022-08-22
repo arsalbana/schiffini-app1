@@ -6,9 +6,10 @@ import { CartContext } from '../../Contexts/CartContext';
 import './CartWidget.scss';
 
 
+
 const CartWidget = () => {
     const [anchorEl, setAnchorEl] = useState(null);
-
+    
     const { cartProducts, clear, deleteProduct, totalProducts} = useContext(CartContext)
 
     const open = Boolean(anchorEl);
@@ -42,11 +43,13 @@ const CartWidget = () => {
                             <img src={`/assets/${product.image}`} alt="" />
                             <div className='CartProductDetail'>
                                 <p>{product.title}</p>
-                                <p>Papas Fritas</p>
+                                <p>{product.title}</p>
                             </div>
                             <div className='CartProductDetail'>
                                 <p>$ {product.precio}</p>
                             </div>
+                           
+                            
                             
                             
                             <div className='CartProductAction' >
@@ -55,6 +58,7 @@ const CartWidget = () => {
                         </div>
                     )
                 })}
+                
                 <div className='CartProductDetail'>
                                 <p> Total Productos:  {totalProducts}</p>
                             </div>

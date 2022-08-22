@@ -8,10 +8,10 @@ const ItemCount = ({ stock, initial, setCantidadSeleccionada, productData }) => 
   const {addProductToCart} = useContext(CartContext)
   
   const onAdd = () => {
-    console.log("Agregar al carrito: ", setCantidadSeleccionada)
+    console.log("Agregar al carrito: ", contador)
     console.log("info producto", productData)
     
-    addProductToCart(productData)
+    addProductToCart(productData, contador)
     setCantidadSeleccionada(contador)
 }
   const [contador, setContador] = useState(initial);
