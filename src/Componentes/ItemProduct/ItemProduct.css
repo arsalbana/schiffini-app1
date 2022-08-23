@@ -1,0 +1,57 @@
+.container {
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  padding: 2%;
+  background-image: url("https://public/assets/hamburguesa.png");
+}
+
+.container .item {
+  padding-inline: 1.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-decoration: none;
+}
+
+.container .item .imagenes {
+  width: 100%;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 12px;
+}
+
+.container .item .item1 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 180px;
+  height: 300px;
+  padding: 10%;
+  margin: 10px;
+  gap: 20px;
+  -webkit-box-shadow: 3px;
+          box-shadow: 3px;
+  border: 1px;
+  text-align: center;
+  background-color: #d6faee;
+  border-radius: 12px;
+}
+
+.container .item .item1 button {
+  margin: 10%;
+  color: white;
+  background-color: #492147;
+  border-width: 1px;
+  height: 24px;
+  -webkit-box-shadow: 1px 1px #2e104d;
+          box-shadow: 1px 1px #2e104d;
+  border-radius: 12px;
+}
+/*# sourceMappingURL=ItemProduct.css.map */

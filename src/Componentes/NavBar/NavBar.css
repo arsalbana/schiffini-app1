@@ -1,0 +1,91 @@
+.items {
+  font-family: 'Quicksand', sans-serif;
+  list-style: none;
+  background-color: #98fad4;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 7em;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.items button {
+  background-color: #98fad4;
+  border-style: none;
+}
+
+.items button :hover {
+  background-color: #98fad4;
+  border-color: #61dafb;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.items button :link {
+  border-style: none;
+}
+
+.items a:link {
+  color: black;
+  text-decoration: none;
+  border-style: none;
+}
+
+.items a:hover {
+  background-color: #98fad4;
+  text-decoration: none;
+}
+
+.items a:active {
+  text-decoration: none;
+}
+
+.items .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.items .logo .logob {
+  width: 15%;
+  height: 15%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.items .logo .textoLogo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 1000;
+  margin: 3%;
+  color: black;
+}
+
+.items .boton {
+  height: 4em;
+  border-style: none;
+}
+
+.items .boton :hover {
+  border-color: #9ad4e4;
+}
+/*# sourceMappingURL=NavBar.css.map */

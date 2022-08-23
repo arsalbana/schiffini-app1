@@ -1,0 +1,36 @@
+.list-products {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal-custom {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: white;
+  width: 90vw;
+  height: 90vh;
+  -webkit-box-shadow: 1px 5px 5px #00000047;
+          box-shadow: 1px 5px 5px #00000047;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.modal-custom img {
+  width: 40%;
+  height: auto;
+}
+
+.cruz {
+  position: fixed;
+  z-index: 1;
+  top: 0%;
+  left: 50%;
+  color: #26bdbd;
+}
+/*# sourceMappingURL=Modal.css.map */

@@ -1,0 +1,114 @@
+.itemDetail {
+  width: 100%;
+  height: auto;
+  background-color: #d6faee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.itemDetail .itemDetail1 {
+  margin: 5%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.itemDetail .itemDetail1 .imagenes {
+  width: 20em;
+  height: auto;
+  border-radius: 12px;
+}
+
+.itemDetail .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+  padding: 2%;
+  height: 100%;
+  width: 5%;
+  text-decoration: none;
+  margin: 3%;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+.itemDetail .info .finalizar {
+  width: 6rem;
+  height: 1.5rem;
+  font-size: .6rem;
+  margin: 20%;
+  border-radius: 12px;
+  border-color: darkgray;
+}
+
+.itemDetail .columnaCuadros {
+  margin: 4%;
+  padding-top: 1%;
+  width: 4em;
+  height: auto;
+  border-radius: 12px;
+}
+
+.itemDetail .columnaCuadros .fotoChica {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1%;
+  border-radius: 12px;
+}
+
+.itemDetail .columnaCuadros .fotoChica .imagenes {
+  border-radius: 12px;
+}
+
+.itemDetail .countProd {
+  padding: 7%;
+  width: 200px;
+  height: 120px;
+  border-radius: 12px;
+  border-color: darkgray;
+  margin: 3%;
+  text-decoration: none;
+}
+
+.itemDetail .countProd button {
+  border-radius: 12px;
+  border-color: darkgray;
+  margin: 3%;
+}
+
+.itemDetail .countProd .contenedorCount {
+  padding: 2%;
+}
+
+.itemDetail .buttonPrimary {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: .5em;
+  background-color: white;
+  width: 6rem;
+  height: 1.5rem;
+  font-weight: 500;
+  margin: 5%;
+}
+/*# sourceMappingURL=ItemDetail.css.map */
