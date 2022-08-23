@@ -13,13 +13,13 @@ const CartProvider = ({children}) => {
         let isInCart = cartProducts.find(cartItem => cartItem.id === product.id)
         if(!isInCart) {
             console.log("se agrego el producto:", product.id)
-            setTotalProducts(totalProducts + 1)
+            setTotalProducts(totalProducts + contador)
             return setCartProducts(cartProducts => [...cartProducts, product])
         }
         if(isInCart) {
             console.log("otro mproducto mas", product)
             setTotalProducts(totalProducts + contador)
-            
+            return setCartProducts
         }
     }
     const [contador, setCantidadSeleccionada] = useState()
@@ -33,6 +33,7 @@ const CartProvider = ({children}) => {
     }
     const cantidad = () => {
         setCantidadSeleccionada (contador)
+        console.log("cantidad", cantidad)
     }
 
     const data = {

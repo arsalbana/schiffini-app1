@@ -21,7 +21,7 @@ const CartWidget = () => {
     };
     return(
         <div className='cart-widget' >
-            {cartProducts.length !== 0 && <p>{totalProducts}</p>}
+            {cartProducts.length !== 0 && <p>{totalProducts} </p>}
             <ShoppingCartIcon 
                 aria-controls={open ? 'basic-menu' : undefined}
                 aria-haspopup="true"
@@ -43,14 +43,11 @@ const CartWidget = () => {
                             <img src={`/assets/${product.image}`} alt="" />
                             <div className='CartProductDetail'>
                                 <p>{product.title}</p>
-                                <p>{product.title}</p>
+                                
                             </div>
                             <div className='CartProductDetail'>
                                 <p>$ {product.precio}</p>
                             </div>
-                           
-                            
-                            
                             
                             <div className='CartProductAction' >
                                 <DeleteIcon onClick={() => deleteProduct(product)}/>
