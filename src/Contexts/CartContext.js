@@ -15,10 +15,13 @@ const CartProvider = ({children}) => {
             console.log("se agrego el producto:", product.title + " ", contador)
             setTotalProducts( totalProducts + contador)
             return setCartProducts(cartProducts => [...cartProducts, product])
+            
         }
         if(isInCart) {
-            console.log("otro mproducto mas", product.title + " ", contador)
+            console.log("otro producto mas", product.title + " ", contador)
+            console.log("contador", cartProducts)
             setTotalProducts( totalProducts + contador)
+            
             
         }
     }
