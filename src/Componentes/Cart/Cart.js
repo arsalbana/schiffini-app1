@@ -21,7 +21,7 @@ const Cart = () => {
                             <img src={`/assets/${product.image}`} alt="" />
                             <div className='CartProductDetail'>
                                 <p>{product.title}</p>
-                                <p>Papas Fritas</p>
+                                
                             </div>
                             <div className='CartProductDetail'>
                                 <p>$ {product.precio}</p>

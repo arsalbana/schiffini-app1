@@ -9,7 +9,7 @@ import Modal from '../Modal/Modal'
 
 
 const ItemDetailContainer= () => {
-    const {id, category} = useParams ()
+    const {id} = useParams ()
     const [showModal, setShowModal] = useState(false)
     
 
