@@ -41,6 +41,7 @@ const CartProvider = ({children}) => {
     const clear = () => {
         setCartProducts([])
         setTotalProducts(totalProducts == 0)
+        setTotalPrice(totalPrice == 0)
     }
     const cantidad = () => {
         setCantidadSeleccionada (contador)

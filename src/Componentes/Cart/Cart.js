@@ -2,6 +2,7 @@ import { CartContext } from '../../Contexts/CartContext';
 import { useContext} from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import '../../Componentes/NavBar/CartWidget.scss';
+import {Link} from 'react-router-dom';
 
 const Cart = () => {
     
@@ -40,7 +41,8 @@ const Cart = () => {
                 <div className='CartProductDetail'>
                                 <p> Precio total:  {totalPrice}</p>
                 </div>
-                <button onClick={() => clear()} className={"btn-delete-all"}>Terminar Compra</button>
+
+                {totalProducts > 0 ? <button className='finalizar'><Link to="/">Finalizar Compra</Link></button> : <Link to="/">  <p> No hay productos en el carrito </p> </Link>}
                 
             
         </div>
