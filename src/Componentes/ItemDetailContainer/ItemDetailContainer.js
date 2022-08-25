@@ -1,6 +1,5 @@
 import ItemDetail from "../ItemDetail/ItemDetail"
 import React from 'react';
-import products from "../../utils/products.mock";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
