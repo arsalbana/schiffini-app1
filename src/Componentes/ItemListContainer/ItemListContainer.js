@@ -16,6 +16,7 @@ const ItemListContainer = () => {
         const productList = productSnapshot.docs.map( (doc) => {
             let product = doc.data()
             product.id = doc.id
+            console.log("producto", product)
             return product
         })
         return productList
@@ -28,7 +29,7 @@ const ItemListContainer = () => {
             setListProducts(res)
         })
         
-    })
+    }, [])
     return(
         <div className="item">
             
