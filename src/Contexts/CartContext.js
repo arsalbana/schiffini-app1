@@ -7,14 +7,20 @@ const CartProvider = ({children}) => {
     const [cartProducts, setCartProducts] = useState([])
     console.log("mostrar cartproduct", cartProducts)
     const [totalProducts, setTotalProducts] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(0)
     console.log("total productos", totalProducts)
     
     const addProductToCart = (product, contador) => {
+       
         let isInCart = cartProducts.find(cartItem => cartItem.id === product.id)
         if(!isInCart) {
             console.log("se agrego el producto:", product.title + " ", contador)
             setTotalProducts( totalProducts + contador)
+            
+            setTotalPrice(totalPrice + (contador * product.precio))
+            console.log("precio total", totalPrice)
             return setCartProducts(cartProducts => [...cartProducts, product])
+            
             
         }
         if(isInCart) {
@@ -48,7 +54,8 @@ const CartProvider = ({children}) => {
         clear,
         addProductToCart,
         totalProducts,
-        cantidad
+        cantidad,
+        totalPrice
         
        
     }

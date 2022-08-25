@@ -10,7 +10,7 @@ import './CartWidget.scss';
 const CartWidget = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     
-    const { cartProducts, clear, deleteProduct, totalProducts, cantidad} = useContext(CartContext)
+    const { cartProducts, clear, deleteProduct, totalProducts, cantidad, totalPrice} = useContext(CartContext)
 
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -62,6 +62,9 @@ const CartWidget = () => {
                 
                 <div className='CartProductDetail'>
                                 <p> Total Productos:  {totalProducts}</p>
+                            </div>
+                            <div className='CartProductDetail'>
+                                <p> Precio Total:  {totalPrice}</p>
                             </div>
                 <button onClick={() => clear()} className={"btn-delete-all"}>Borrar todo</button>
             </Menu>

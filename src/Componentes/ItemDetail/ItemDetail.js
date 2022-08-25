@@ -40,8 +40,8 @@ const ItemDetail = ({data, setShowModal, addProductToCart, productData})  => {
                 <p>{title}</p>
                 <span>${precio}</span>
                 
-                <ItemCount onAdd={onAdd} initial={1} stock={stock}  setCantidadSeleccionada={setCantidadSeleccionada} productData={data} />
-                <button className="finalizar"><Link to="/cart">Finalizar compra</Link></button>
+                {cantidadSeleccionada > 0 ? <button className='finalizar'><Link to="/cart">Finalizar Compra</Link></button> : <ItemCount onAdd={onAdd} initial={1} stock={stock}  setCantidadSeleccionada={setCantidadSeleccionada} productData={data} />}
+                
                 
 
 
@@ -49,6 +49,7 @@ const ItemDetail = ({data, setShowModal, addProductToCart, productData})  => {
 
             </div>
             {console.log("cant selecc ..", cantidadSeleccionada)}
+    
 
         </div>
     );

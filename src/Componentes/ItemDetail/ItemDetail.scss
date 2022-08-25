@@ -37,15 +37,16 @@
         margin-top: 10%;
         
         
-        .finalizar{
+        button.finalizar{
             width: 6rem;
             height: 1.5rem;
             font-size: .6rem;
             margin: 20%;
             border-radius: 12px;
             border-color: darkgray;
+            text-decoration: none;
             
-            
+ 
         }
     }
     
@@ -82,6 +83,11 @@
             border-radius: 12px;
             border-color: darkgray;
             margin: 3%;
+            text-decoration: none;
+            :active{
+                text-decoration: none;
+            }
+
         
         }
         

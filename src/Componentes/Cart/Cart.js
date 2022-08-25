@@ -6,7 +6,7 @@ import '../../Componentes/NavBar/CartWidget.scss';
 const Cart = () => {
     
 
-    const { cartProducts, clear, deleteProduct, totalProducts} = useContext(CartContext)
+    const { cartProducts, clear, deleteProduct, totalProducts, totalPrice} = useContext(CartContext)
 
    
     return(
@@ -36,6 +36,9 @@ const Cart = () => {
                 })}
                 <div className='CartProductDetail'>
                                 <p> Total Productos:  {totalProducts}</p>
+                </div>
+                <div className='CartProductDetail'>
+                                <p> Precio total:  {totalPrice}</p>
                 </div>
                 <button onClick={() => clear()} className={"btn-delete-all"}>Terminar Compra</button>
                 
