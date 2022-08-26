@@ -10,9 +10,15 @@ const Cart = () => {
     const [showModal, setShowModal] = useState(false)
     const { cartProducts, clear, deleteProduct, totalProducts, totalPrice} = useContext(CartContext)
     const [order, setOrder] = useState({
-        items : [],
+        items : cartProducts.map((product) => {
+            return {
+                id : product.id,
+                title : product.title,
+                precio : product.precio
+            }
+        }),
         buyers: {},
-        total: 0
+        total: totalPrice 
     })
     const [formData, setFormData] = useState({
         name: '',
@@ -22,7 +28,7 @@ const Cart = () => {
     
 const handleChange = (e) =>{
     console.log("valor name", e.target.name)
-    setFormData ({ [e.target.name] : e.target.value })
+    setFormData ({ ...formData, [e.target.name] : e.target.value })
     console.log("formData", formData)
 }
 
@@ -31,7 +37,7 @@ const handleChange = (e) =>{
         <div>Carrito de checkout</div>
         
         <div className='cart-widget' >
-            
+        {console.log("order:", order)}
                 {cartProducts.map((product) => {
                     return(
                         <div className='CartProductIn' key={product.id}>
