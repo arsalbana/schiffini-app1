@@ -19,13 +19,19 @@ const Cart = () => {
         phone: '',
         email: '',
     })
-   
+    
+const handleChange = (e) =>{
+    console.log("valor name", e.target.name)
+    setFormData ({ [e.target.name] : e.target.value })
+    console.log("formData", formData)
+}
+
     return(
         <>
         <div>Carrito de checkout</div>
+        
         <div className='cart-widget' >
-           
-           
+            
                 {cartProducts.map((product) => {
                     return(
                         <div className='CartProductIn' key={product.id}>
@@ -57,9 +63,10 @@ const Cart = () => {
                 {showModal &&
                 <Modal title = "Datos de contacto" close={ () => setShowModal()}>
                     <form>
-                        <input type='text'name='name' placeholder ='nombre' />
-                        <input type='number'name='phone' placeholder = 'numero'/>
-                        <input type='email'name='email' placeholder = 'email'/>
+                        
+                        <input type='text'name='name' placeholder ='nombre' order={formData.name} onChange={handleChange} />
+                        <input type='number'name='phone' placeholder = 'numero' order={formData.phone} onChange={handleChange} />
+                        <input type='email'name='email' placeholder = 'email' order={formData.email} onChange={handleChange} />
                         <button>Enviar</button>
                         
                     </form>
