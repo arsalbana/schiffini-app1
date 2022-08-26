@@ -41,7 +41,7 @@ const submitData = (e) => {
 }
 
 const pushData = async (newOrder) => {
-    const collectionOrder = collection(db, 'ItemProduct')
+    const collectionOrder = collection(db, 'Ordenes')
     const orderDoc = await addDoc(collectionOrder, newOrder)
     console.log('orden generada: ', orderDoc)
 }
