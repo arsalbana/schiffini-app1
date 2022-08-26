@@ -3,7 +3,9 @@ import { useContext, useState} from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './Cart.scss';
 import {Link} from 'react-router-dom';
-import Modal from '../Modal/Modal'
+import Modal from '../Modal/Modal';
+import db from '../../utils/firebaseConfigs.js';
+import {collection, addDoc} from 'firebase/firestore'
 
 const Cart = () => {
     
@@ -35,6 +37,13 @@ const handleChange = (e) =>{
 const submitData = (e) => {
     e.preventDefault()
     console.log("orden para enviar: ", {...order, buyer: formData})
+    pushData({...order, buyer: formData})
+}
+
+const pushData = async (newOrder) => {
+    const collectionOrder = collection(db, 'ItemProduct')
+    const orderDoc = await addDoc(collectionOrder, newOrder)
+    console.log('orden generada: ', orderDoc)
 }
 
     return(
