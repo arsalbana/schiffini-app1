@@ -32,6 +32,11 @@ const handleChange = (e) =>{
     console.log("formData", formData)
 }
 
+const submitData = (e) => {
+    e.preventDefault()
+    console.log("orden para enviar: ", {...order, buyer: formData})
+}
+
     return(
         <>
         <div>Carrito de checkout</div>
@@ -68,12 +73,12 @@ const handleChange = (e) =>{
                 
                 {showModal &&
                 <Modal title = "Datos de contacto" close={ () => setShowModal()}>
-                    <form>
+                    <form onSubmit={submitData}>
                         
                         <input type='text'name='name' placeholder ='nombre' order={formData.name} onChange={handleChange} />
                         <input type='number'name='phone' placeholder = 'numero' order={formData.phone} onChange={handleChange} />
                         <input type='email'name='email' placeholder = 'email' order={formData.email} onChange={handleChange} />
-                        <button>Enviar</button>
+                        <button type='submit'>Enviar</button>
                         
                     </form>
                 </Modal>
