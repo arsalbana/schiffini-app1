@@ -35,7 +35,7 @@ const handleChange = (e) =>{
     return(
         <>
         <div>Carrito de checkout</div>
-        
+        <h3>Resumen de pedido</h3>
         <div className='cart-widget' >
         {console.log("order:", order)}
                 {cartProducts.map((product) => {
@@ -80,20 +80,11 @@ const handleChange = (e) =>{
                 }
                  <div className="Subtotal">
                     <button onClick={() => setShowModal(true)}> Pagar</button>
-                    <div className="ResumenPedido">
-                        <h3>Resumen de pedido</h3>
-                        <div className="itemPedido">
-                            <p>2 PRODUCTOS</p>
-                            <p>$ 60.000</p>
-                        </div>
+                   
                         <div className="itemPedido">
                             <p>Costo de Delivery $200</p>
                         </div>
-                        <div className="itemPedido">
-                            <p>TOTAL</p>
-                            <p>$ 60.000</p>
-                        </div>
-                    </div>
+                        
                 </div>
                 
             
