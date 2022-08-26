@@ -1,7 +1,7 @@
 import { CartContext } from '../../Contexts/CartContext';
 import { useContext, useState} from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
-import '../../Componentes/NavBar/CartWidget.scss';
+import './Cart.scss';
 import {Link} from 'react-router-dom';
 import Modal from '../Modal/Modal'
 
