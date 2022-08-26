@@ -10,6 +10,7 @@ import {collection, addDoc} from 'firebase/firestore'
 const Cart = () => {
     
     const [showModal, setShowModal] = useState(false)
+    const [success, setSuccess] = useState()
     const { cartProducts, clear, deleteProduct, totalProducts, totalPrice} = useContext(CartContext)
     const [order, setOrder] = useState({
         items : cartProducts.map((product) => {
@@ -43,6 +44,7 @@ const submitData = (e) => {
 const pushData = async (newOrder) => {
     const collectionOrder = collection(db, 'Ordenes')
     const orderDoc = await addDoc(collectionOrder, newOrder)
+    setSuccess(orderDoc.id)
     console.log('orden generada: ', orderDoc)
 }
 
@@ -82,6 +84,15 @@ const pushData = async (newOrder) => {
                 
                 {showModal &&
                 <Modal title = "Datos de contacto" close={ () => setShowModal()}>
+                    {success ? (
+                        <>
+                            
+                            <h2>Su orden se genero con éxito</h2>
+                            <p>ID de compra: {success}</p>
+                        </>
+                    ): (
+                        <form onSubmit={submitData}></form> 
+                    )}
                     <form onSubmit={submitData}>
                         
                         <input type='text'name='name' placeholder ='nombre' order={formData.name} onChange={handleChange} />
