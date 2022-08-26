@@ -91,9 +91,7 @@ const pushData = async (newOrder) => {
                             <p>ID de compra: {success}</p>
                         </>
                     ): (
-                        <form onSubmit={submitData}></form> 
-                    )}
-                    <form onSubmit={submitData}>
+                        <form onSubmit={submitData}>
                         
                         <input type='text'name='name' placeholder ='nombre' order={formData.name} onChange={handleChange} />
                         <input type='number'name='phone' placeholder = 'numero' order={formData.phone} onChange={handleChange} />
@@ -101,6 +99,8 @@ const pushData = async (newOrder) => {
                         <button type='submit'>Enviar</button>
                         
                     </form>
+                    )}
+                   
                 </Modal>
                 }
                  <div className="Subtotal">
