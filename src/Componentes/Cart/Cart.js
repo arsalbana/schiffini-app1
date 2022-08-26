@@ -21,6 +21,7 @@ const Cart = () => {
             }
         }),
         buyers: {},
+        date: new Date().toLocaleDateString(),
         total: totalPrice 
     })
     const [formData, setFormData] = useState({
