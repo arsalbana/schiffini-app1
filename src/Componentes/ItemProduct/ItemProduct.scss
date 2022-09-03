@@ -3,17 +3,13 @@
 .container{
     align-content: space-between;
     padding: 2%;
-    background-image: url("https://public/assets/hamburguesa.png");
+
     
     .item{
         padding-inline: 1.3em;
         display: flex;
         flex-direction: row;
         text-decoration: none;
-        
-    
-        
-
         
         .imagenes{
             width: 100%;

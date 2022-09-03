@@ -1,0 +1,62 @@
+.foo{
+  
+    .item2{
+      font-family: 'Quicksand', sans-serif;
+      list-style: none;
+      background-color: #98fad4;
+      align-items: center;
+      justify-content: space-around;
+      display: flex;
+      flex-direction: row;
+      height: 200px;
+      align-content: center;
+      padding: 2%;
+      font-size: 1.2rem;
+      
+      .filaNav{
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        padding-right: 20%;
+      }
+      .Redes{
+        display: flex;
+        flex-direction: column;
+      }
+      li{
+        button{
+          background-color: #98fad4;
+          border-style: none;
+         
+          .boton{
+            border-style: none;
+          }
+          :hover{
+            background-color: #98fad4;
+            border-color: #61dafb;
+            text-decoration: none;
+          
+          }
+          :link{
+            color: black;
+            text-decoration: none;
+            border-style: none;
+            
+          }
+        }
+      }
+      .logo{
+        
+        .logob{
+          
+          align-self: center;
+          width: 25%;
+          height: auto;
+          min-width: 30px;
+         
+        }
+      
+      }   
+    }
+    
+  }

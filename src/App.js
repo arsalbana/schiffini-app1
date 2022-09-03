@@ -1,8 +1,8 @@
 
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CartProvider from './Contexts/CartContext';
-
+import CartProvider from './Contexts/CartContext'; 
+import Footer from './Componentes/Footer/Footer';
 import NavBar from './Componentes/NavBar/NavBar';
 import Home from './pages/Home';
 import Contacto from './pages/Contacto';
@@ -20,6 +20,7 @@ function App() {
       <BrowserRouter>
         
             <NavBar/>
+            
             <Routes>
               <Route path='/' element={
                 <Home />
@@ -31,10 +32,10 @@ function App() {
               <Route path='/cart' element={<Checkout />}/>
               <Route path='*' element={<h1>Error 404- not found</h1>} />
               
-            
+              
               
             </Routes>
-        
+            <Footer />
       </BrowserRouter>
     </CartProvider>
     

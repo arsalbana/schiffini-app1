@@ -1,7 +1,7 @@
 
 import './NavBar.scss';
 import {Link} from 'react-router-dom';
-import image from "../../image/logo burgourmet.png"
+import image from "../../image/logo con tipografia.png"
 import CartWidget from './CartWidget'
 
 
@@ -10,8 +10,8 @@ const NavBar = () => {
     return(
         <div className='nav'>
             
-            <ul className='items'>
-            <Link to='/'> <div className='logo'><img className='logob' src={image} alt='imagenLogo'/> <p className="textoLogo">Burgourmet</p></div></Link>
+            <ul className='items1'>
+            <Link to='/'> <div className='logo'><img className='logob' src={image} alt='imagenLogo'/></div></Link>
             
             
             <Link to='/Nosotros'><li>
@@ -24,7 +24,7 @@ const NavBar = () => {
                 <button className="boton">Contacto</button>
             </li></Link>
             <li>
-                <button><CartWidget /></button>
+                <button className='CartProductIn'><CartWidget /></button>
             </li>
             </ul>
             
