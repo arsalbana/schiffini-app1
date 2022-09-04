@@ -11,7 +11,7 @@
       height: 200px;
       align-content: center;
       padding: 2%;
-      font-size: 1.2rem;
+    
       
       .filaNav{
         display: flex;
@@ -29,6 +29,7 @@
         button{
           background-color: #98fad4;
           border-style: none;
+          font-size: calc(.5vw + 8px);
          
           .boton{
             border-style: none;
