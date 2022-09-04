@@ -1,0 +1,16 @@
+.contenedorListaComidas{
+    display: flex;
+    flex-direction: column;
+    .textoComidas{
+    
+        .comidas{
+            font-size:2em;
+        }
+    }
+    .cardsComidas{
+        display: flex;
+        flex-direction: row;
+    }
+}
+    
+
