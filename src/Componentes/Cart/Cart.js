@@ -17,7 +17,8 @@ const Cart = () => {
             return {
                 id : product.id,
                 title : product.title,
-                precio : product.precio
+                precio : product.precio,
+                cantidad: product.contador,
             }
         }),
         buyers: {},
