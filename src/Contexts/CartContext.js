@@ -1,75 +1,73 @@
 import { createContext, useState } from "react";
 
+export const CartContext = createContext()
 
-const CartContext = createContext()
-
-const CartProvider = ({children}) => {
+const CartProvider = ({children}) => { 
     const [cartProducts, setCartProducts] = useState([])
-    console.log("mostrar cartproduct", cartProducts)
-    const [totalProducts, setTotalProducts] = useState(0)
-    const [totalPrice, setTotalPrice] = useState(0)
-    console.log("total productos", totalProducts)
-    
-    const addProductToCart = (product, contador) => {
-       
-        let isInCart = cartProducts.find(cartItem => cartItem.id === product.id)
-        if(!isInCart) {
-            console.log("se agrego el producto:", product.title + " ", contador)
-            setTotalProducts( totalProducts + contador)
-            
-            setTotalPrice(totalPrice + (contador * product.precio))
-            console.log("precio total", totalPrice)
-            return setCartProducts(cartProducts => [...cartProducts, product])
-            
-            
-        }
+    const [totalCart, setTotalCart] = useState(0)
+    let [totalProducts, setTotalProducts] = useState(0)
+    const [ totalPrice, setTotalPrice ] = useState(0)
+
+    const addProductToCart = (product, ItemCount) => {
+        let isInCart = cartProducts.find(
+            (cartItem) => cartItem.id === product.id
+        );
+
         if(isInCart) {
-            console.log("otro producto mas", product.title + " ", contador)
-            console.log("contador", cartProducts)
-            setTotalProducts( totalProducts + contador)
+            if(isInCart.contador + ItemCount > isInCart.stock)
             
-            
-        }
-    }
-    const [contador, setCantidadSeleccionada] = useState()
-    const deleteProduct = (product) => {
-        console.log("Producto a eliminar:", product)
-        setCartProducts(cartProducts.filter( (cartProduct) => cartProduct.id !== product.id) )
+            return false; 
+            isInCart.contador += ItemCount
+            setTotalProducts(isInCart.contador + totalProducts)    
+        } else {
+            product.contador = ItemCount;
+            setTotalProducts(ItemCount + totalProducts)
+            setCartProducts ([...cartProducts, product]);
+        }  
+       
         
+        setTotalCart(
+            totalCart + product.precio * product.contador
+            
+        )
+        
+        setTotalPrice(totalCart + product.precio * product.contador)
     }
-    
-    const clear = () => {
+
+    const clearAll = () => {
         setCartProducts([])
-        setTotalProducts(totalProducts == 0)
-        setTotalPrice(totalPrice == 0)
+        setTotalProducts(0)
+        setTotalCart(0)
     }
-    const cantidad = () => {
-        setCantidadSeleccionada (contador)
-        console.log("setcant", cantidad)
+
+    const clearProduct = ( id ) => {
+        const prod = cartProducts.find((product) => product.id === id)
+        setTotalCart(
+            totalCart - prod.precio * prod.contador
+        )
+
+        setTotalProducts(totalProducts - prod.contador)
+
+        const newCart = cartProducts.filter((product) => product.id !== id)
+        setCartProducts(newCart);
     }
 
     const data = {
         cartProducts,
         setCartProducts,
-        deleteProduct,
-        clear,
-        addProductToCart,
+        clearAll,
+        totalCart,
         totalProducts,
-        cantidad,
+        clearProduct,
+        addProductToCart,
         totalPrice
-        
-       
     }
 
-    return(
+    return (
         <CartContext.Provider value={data}>
             {children}
-            
-            
         </CartContext.Provider>
     )
 }
 
 export default CartProvider
-
-export { CartContext }

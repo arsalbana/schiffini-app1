@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Modal from '../Modal/Modal';
 import db from '../../utils/firebaseConfigs';
-import { doc, getDoc } from 'firebase/firestore'
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
 
 
@@ -25,16 +25,18 @@ const ItemDetailContainer= () => {
             setProductData(res)
        }) 
         
-    }, [])
+    }, [id])
     
 
     const getProduct = async () => {
-        const docRef = doc(db, 'ItemProduct', id)
+        const querydb = getFirestore();
+        const docRef = doc(querydb, 'ItemProduct', id)
         const docSnapshot = await getDoc(docRef)
         let product = docSnapshot.data()
         product.id = docSnapshot.id
         console.log('data con id', product)
         return product
+  
     }
 
     return (

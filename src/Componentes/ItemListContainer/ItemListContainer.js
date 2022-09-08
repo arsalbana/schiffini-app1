@@ -1,9 +1,10 @@
 
 import ItemList from "../ItemList/ItemList"
-import {useState, useEffect, useParams } from "react"
+import {useState, useEffect } from "react"
 import '../ItemProduct/ItemProduct.scss'
 import { collection, getDocs, where, query } from "firebase/firestore"
 import db from "../../utils/firebaseConfigs"
+import { useParams } from "react-router-dom";
 
 
 
@@ -18,6 +19,7 @@ const ItemListContainer = () => {
        
 
     const categoryRef = collection(db, "category");
+    
 
     // Create a query against the collection.
     const q = query(categoryRef, where("category", "==", "Sanguches"));
@@ -46,6 +48,7 @@ const ItemListContainer = () => {
    
 
     useEffect( () => {
+        
         getProducts()
         .then((res) => {
             setListProducts(res)

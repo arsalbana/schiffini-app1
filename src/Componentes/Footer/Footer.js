@@ -12,6 +12,8 @@ const Footer= () => {
             
             <ul className='item2'>
             <Link to='/'> <div className='logo'><img className='logob' src={image} alt='imagenLogo'/></div></Link>
+
+            
             
             <div className='filaNav'>
                 <Link to='/Nosotros'><li>
@@ -31,6 +33,9 @@ const Footer= () => {
                 <li> <WhatsAppIcon/> </li>
             </div>
             
+            <div className="container">
+            © Albana Schiffini 2022
+            </div>
             
             </ul>
             

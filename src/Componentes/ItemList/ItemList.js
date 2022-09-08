@@ -13,7 +13,7 @@ const ItemList = ({dataProducts}) => {
                 </div>
                 
                 <div className="cardsComidas">
-                {dataProducts.map( (product) =>{
+                {dataProducts.map( product =>{
                     return <ItemProduct key={product.id} data={product}/>
                     
                 })}
