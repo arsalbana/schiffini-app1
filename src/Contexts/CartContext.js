@@ -38,12 +38,13 @@ const CartProvider = ({children}) => {
         setCartProducts([])
         setTotalProducts(0)
         setTotalCart(0)
+        setTotalPrice(0)
     }
 
     const clearProduct = ( id ) => {
         const prod = cartProducts.find((product) => product.id === id)
-        setTotalCart(
-            totalCart - prod.precio * prod.contador
+        setTotalCart( totalCart -
+            prod.precio * prod.contador
         )
 
         setTotalProducts(totalProducts - prod.contador)

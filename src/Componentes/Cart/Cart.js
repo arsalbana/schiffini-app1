@@ -11,7 +11,7 @@ const Cart = () => {
     
     const [showModal, setShowModal] = useState(false)
     const [success, setSuccess] = useState()
-    const { cartProducts, clear, deleteProduct, totalProducts, totalPrice} = useContext(CartContext)
+    const { cartProducts, clearProduct, totalProducts, totalPrice} = useContext(CartContext)
     const [order, setOrder] = useState({
         items : cartProducts.map((product) => {
             return {
@@ -25,6 +25,7 @@ const Cart = () => {
         date: new Date().toLocaleDateString(),
         total: totalPrice 
     })
+    
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -65,12 +66,16 @@ const pushData = async (newOrder) => {
                                 
                             </div>
                             <div className='CartProductDetail'>
+                                <p>Cantidad: {product.contador}</p>
+                                
+                            </div>
+                            <div className='CartProductDetail'>
                                 <p>$ {product.precio}</p>
                             </div>
                             
                             
                             <div className='CartProductAction' >
-                                <DeleteIcon onClick={() => deleteProduct(product)}/>
+                                <DeleteIcon onClick={() => clearProduct(product.id)}/>
                             </div>
                         </div>
                     )
@@ -82,7 +87,9 @@ const pushData = async (newOrder) => {
                                 <p> Precio total:  {totalPrice}</p>
                 </div>
 
-                {totalProducts > 0 ? <button className='finalizar'><Link to="/">Finalizar Compra</Link></button> : <Link to="/">  <p> No hay productos en el carrito </p> </Link>}
+                {totalProducts > 0 ? <p>
+                    Falta poco para finalizar la compra
+                </p> : <Link to="/">  <p> No hay productos en el carrito </p> </Link>}
                 
                 {showModal &&
                 <Modal title = "Datos de contacto" close={ () => setShowModal()}>
