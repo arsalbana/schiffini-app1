@@ -7,8 +7,7 @@
     
     .item{
         padding-inline: 1.3em;
-        display: flex;
-        flex-direction: row;
+        
         text-decoration: none;
         
         
@@ -21,7 +20,7 @@
             }
         
         .item1{
-            flex-direction: column;
+            
             width: 20vw;
             height: auto;
             padding: 10%;
@@ -30,8 +29,10 @@
             box-shadow: 3px;
             border: 1px;
             text-align: center;
+            align-items: center;
             background-color: rgb(214, 250, 238);
             border-radius: 12px;
+            font-size: calc(1.2vw + 10px);
             
             
             
@@ -41,9 +42,12 @@
                 color: white;
                 background-color: rgb(73, 33, 71);
                 border-width: 1px;
-                height: 24px;
+                height: 30px;
+                width: calc(10px + 15vw);
                 box-shadow: 1px 1px rgb(46, 16, 77);
                 border-radius: 12px;
+                align-self: center;
+                font-size: calc(5px + 1vw);
                 
     
             }
