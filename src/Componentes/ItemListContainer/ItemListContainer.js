@@ -2,64 +2,58 @@
 import ItemList from "../ItemList/ItemList"
 import {useState, useEffect } from "react"
 import '../ItemProduct/ItemProduct.scss'
-import { collection, getDocs, where, query } from "firebase/firestore"
-import db from "../../utils/firebaseConfigs"
+import { collection, getDocs, where, query, getFirestore } from "firebase/firestore"
 import { useParams } from "react-router-dom";
+import ItemProduct from "../ItemProduct/ItemProduct";
 
 
 
 const ItemListContainer = () => {
-    const [listProducts, setListProducts] = useState([])
-   
-    const getProducts = async () => {
-        const productCollection = collection(db, 'ItemProduct')
-        const productSnapshot = await getDocs (productCollection)
-       
-        console.log("product snapshot", productSnapshot)
-       
-
-    const categoryRef = collection(db, "category");
+    const [data, setData] = useState([])
+    const { categoryParrilla } = useParams();
+    
+    //const categoryItem = ({data}, category ) => {
+    //    return(
+    //        <>
+    //        {console.log("categorias", data, categoryItem)}
+    //        {data.map( (product) =>{
+    //            if(product.id && product.category == categoryItem){
+    //                return <ItemProduct key = {product.id} data={product}/>
+    //            }
+    //        })}
+            
+    //        </>
+            
+    //    )
+    //}
     
 
-    // Create a query against the collection.
-    const q = query(categoryRef, where("category", "==", "Sanguches"));
-
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-            let product = doc.data()
-            product.id = doc.id
-  // doc.data() is never undefined for query doc snapshots
-    console.log('productos sanguches',product.id, " => ", product);
-    });
-        
-
-        const productList = productSnapshot.docs.map( (doc) => {
-            let product = doc.data()
-            product.id = doc.id
-           
-            console.log("producto", product)
-            console.log("producto id", product.id)
-            
-            return product
-        })
-        return productList
- 
-    }
-   
-
     useEffect( () => {
+        const querydb = getFirestore();
+        const queryCollection = collection(querydb, 'ItemProduct')
         
-        getProducts()
-        .then((res) => {
-            setListProducts(res)
-        })
+        if(categoryParrilla) {
+            const queryFilter = query(queryCollection, where(categoryParrilla, '==', 'Parrilla', '==', 'category'))
+
+            getDocs(queryFilter)
+            .then(
+                res => setData(res.docs.map( ItemProduct => ({ id: ItemProduct.id, ...ItemProduct.data() })))
+            )
+            console.log("categoria", categoryParrilla)
+        } else {
+            getDocs(queryCollection)
+            .then(
+                res => setData(res.docs.map( ItemProduct => ({ id: ItemProduct.id, ...ItemProduct.data() }))))
+        }
         
-    }, [])
+       
+        
+    }, [categoryParrilla])
     return(
         
         <div className="item">
             
-            <ItemList dataProducts={listProducts} />
+            <ItemList dataProducts={data} />
         </div>
         
     )

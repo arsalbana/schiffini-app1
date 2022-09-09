@@ -1,0 +1,232 @@
+@import "variables";
+@import "reseteo";
+@import "mixin0";
+@import "navbar";
+body{
+    background-color: #0f001b;
+
+}
+
+
+.padre{
+    width: 100%;
+    height: 100%;
+    margin: 10px auto;
+    font-family: quicksand;
+    color: rgb(44, 44, 44);
+    background-color: rgb(245, 245, 245);
+    display: grid;
+    grid-template-columns: repeat(1, 1 fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    grid-template-areas: 
+    "terminos"
+    "footer"
+    ;
+
+    .terminos{
+        padding: 5%;
+        grid-area: terminos;
+        @include media (lg) {
+            h2{
+            
+                font-family: 'Pacifico', cursive;
+                font-size:calc(12px + #{$width2});
+                text-decoration: none;
+                color: #0f001b;
+                padding-top: 5%;
+                padding-bottom: 10%;
+                text-align: center;
+            }
+            h4{
+            
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(10px + #{$width1});
+                text-decoration: none;
+                color: #0f001b;
+                padding-bottom: 5%;
+               
+            }   
+            .parrafo{
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(8px + #{$width1});
+                text-decoration: none;
+                color: #0f001b;
+                padding-bottom: 7%;
+            }
+                
+            .button2{
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(8px + #{$width2});
+                align-content: center;
+                box-sizing: content-box;
+                display: inline-block;
+                padding-left: 20%;
+                
+                
+                
+                button{
+                    width: 160px;
+                    height: 30px;
+                    border-radius: 16px;
+                    border: 0em;
+                }  
+                
+            }
+            
+        }
+        @include media (md) {
+            h2{
+            
+                font-family: 'Pacifico', cursive;
+                font-size:calc(12px + #{$width2});
+                text-decoration: none;
+                color: #0f001b;
+                padding-top: 5%;
+                padding-bottom: 10%;
+                text-align: center;
+            }
+            h4{
+            
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(10px + #{$width1});
+                text-decoration: none;
+                color: #0f001b;
+                padding-bottom: 5%;
+                
+            }   
+            .parrafo{
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(8px + #{$width1});
+                text-decoration: none;
+                color: #0f001b;
+                padding-bottom: 7%;
+            }
+                
+            .button2{
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(8px + #{$width2});
+                align-content: center;
+                box-sizing: content-box;
+                display: inline-block;
+                padding-left: 15%;
+                
+                
+                button{
+                    width: 120px;
+                    height: 30px;
+                    border-radius: 16px;
+                    border: 0em;
+                }  
+                
+            }
+            
+        }
+        @include media (sm) {
+            h2{
+            
+                font-family: 'Pacifico', cursive;
+                font-size:calc(12px + #{$width2});
+                text-decoration: none;
+                color: #0f001b;
+                padding-top: 5%;
+                padding-bottom: 10%;
+                text-align: center;
+            }
+            h4{
+            
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(10px + #{$width1});
+                text-decoration: none;
+                color: #0f001b;
+                padding-bottom: 5%;
+                
+            }   
+            .parrafo{
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(8px + #{$width1});
+                text-decoration: none;
+                color: #0f001b;
+                padding-bottom: 7%;
+            }
+                
+            .button2{
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(8px + #{$width2});
+                align-content: center;
+                box-sizing: content-box;
+                display: inline-block;
+                padding-left: 15%;
+                
+                
+                button{
+                    width: 60px;
+                    height: 26px;
+                    border-radius: 12px;
+                    border: 0em;
+                }
+                  
+            }
+            
+        }
+        @include media (xs) {
+            h2{
+            
+                font-family: 'Pacifico', cursive;
+                font-size:calc(12px + #{$width2});
+                text-decoration: none;
+                color: #0f001b;
+                padding-top: 5%;
+                padding-bottom: 10%;
+                text-align: center;
+            }
+            h4{
+            
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(10px + #{$width1});
+                text-decoration: none;
+                color: #0f001b;
+                padding-bottom: 5%;
+               
+            }  
+            .parrafo{
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(8px + #{$width1});
+                text-decoration: none;
+                color: #0f001b;
+                padding-bottom: 7%;
+            } 
+                
+            .button2{
+                font-family: 'Quicksand', sans-serif;
+                font-size:calc(8px + #{$width2});
+                align-content: center;
+                box-sizing: content-box;
+                display: inline-block;
+                padding-left: 15%;
+                
+                
+                button{
+                    width: 60px;
+                    height: 20px;
+                    border-radius: 8px;
+                    border: 0em;
+                }
+            }
+            
+        }
+        
+    }
+
+}
+
+body{
+    background-color: #0f001b;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
+
+@import "footer";

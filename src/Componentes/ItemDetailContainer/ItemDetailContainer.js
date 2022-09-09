@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Modal from '../Modal/Modal';
-import db from '../../utils/firebaseConfigs';
 import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
 

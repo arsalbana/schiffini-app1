@@ -1,0 +1,168 @@
+@import "variables";
+@import "reseteo";
+@import "navbar";
+@import "mixin0";
+body{
+    background-color: #0f001b;
+
+}
+@include media (xs) {
+    .alinear{
+        width: 100%;
+        margin: 10px auto;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3,auto);
+        gap: 10px;
+        grid-template-areas: 
+        "redondo" 
+        "engrilla"
+        "footer";
+            .redondo{
+            grid-area: redondo;
+            padding: 5%;
+            padding-top: 10%;
+            text-decoration: none;
+            width: 50%;
+            margin: auto;
+    
+            }
+            .engrilla{
+                .textop{
+                    
+                    font-size: calc(8px + #{$width2});
+                    font-family: 'Quicksand';
+                    text-align: center;
+                    padding-top: 5%;
+                    
+                }
+                grid-area: engrilla;
+                padding: 5%;
+                
+                
+                
+    
+                
+            }
+    }
+}
+@include media (sm) {
+    .alinear{
+        width: 100%;
+        margin: 10px auto;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3,auto);
+        gap: 10px;
+        grid-template-areas: 
+        "redondo" 
+        "engrilla"
+        "footer";
+            .redondo{
+            grid-area: redondo;
+            padding: 5%;
+            text-decoration: none;
+            width: 50%;
+            margin: auto;
+            padding-top: 10%;
+    
+            }
+            .engrilla{
+                .textop{
+                    
+                    font-size: calc(8px + #{$width2});
+                    font-family: 'Quicksand';
+                    text-align: center;
+                    padding-top: 5%;
+                    
+                }
+                grid-area: engrilla;
+                padding: 5%;
+                
+                
+    
+                
+            }
+    }
+}
+@include media (md) {
+    .alinear{
+        width: 100%;
+        margin: 10px auto;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,auto);
+        gap: 10px;
+        grid-template-areas: 
+        "redondo engrilla"
+        "footer footer";
+            .redondo{
+            grid-area: redondo;
+            padding: 5%;
+            text-decoration: none;
+            width: 50%;
+            margin: auto;
+    
+            }
+            .engrilla{
+                .textop{
+                    
+                    font-size: calc(10px + #{$width2});
+                    font-family: 'Quicksand';
+                    text-align: center;
+                    padding-top: 5%;
+                    
+                }
+                grid-area: engrilla;
+                padding: 5%;
+                padding-top: 30%;
+                
+                
+    
+                
+            }
+    }
+}
+@include media (lg) {
+    .alinear{
+        width: 100%;
+        margin: 10px auto;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,auto);
+        gap: 10px;
+        grid-template-areas: 
+        "redondo engrilla"
+        "footer footer";
+            .redondo{
+            grid-area: redondo;
+            padding: 5%;
+            text-decoration: none;
+            width: 30%;
+            margin: auto;
+    
+            }
+            .engrilla{
+                .textop{
+                    
+                    font-size: calc(12px + #{$width2});
+                    font-family: 'Quicksand';
+                    text-align: center;
+                    padding-top: 20%;
+                    
+                }
+                grid-area: engrilla;
+                padding: 5%;
+                padding-top: 30%;
+                
+                
+    
+                
+            }
+    }
+}
+@import "footer";

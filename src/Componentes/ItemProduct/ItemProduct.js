@@ -3,7 +3,7 @@ import './ItemProduct.scss'
 import {Link} from 'react-router-dom';
 
 const ItemProduct = ({data}) => {
-    const {title, precio, imagen, id} = data
+    const {title, precio, imagen, id, category} = data
 
     
     return(

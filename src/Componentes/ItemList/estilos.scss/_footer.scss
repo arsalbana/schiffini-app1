@@ -1,0 +1,45 @@
+@import "variables";
+.footer{
+
+        background-color: #0f001b;
+        grid-area: footer;   
+        font-size:calc(6px + #{$width1});
+        font-family: 'Quicksand';
+        h4{
+            color: #0f001b;
+        }
+        text-decoration: none;
+        justify-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        padding: 10%;
+    
+    }
+    
+   
+    li{
+        list-style: none;
+        display: inline;
+        text-decoration: none;
+        a:link{
+            text-decoration: none;
+            color: rgb(187, 187, 187);
+        }
+        a:visited{
+            text-decoration: none;
+            color: rgb(187, 187, 187);
+        }
+        a:hover{
+            text-decoration: none;
+            color: rgb(243, 243, 243);
+        }
+        a:active{
+            text-decoration: none;
+            color: rgb(187, 187, 187);
+        }
+    }
+    .logo{
+        justify-items: flex-start;
+        position: initial;
+    }

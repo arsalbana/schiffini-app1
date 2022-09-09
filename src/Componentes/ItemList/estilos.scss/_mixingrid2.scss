@@ -1,0 +1,18 @@
+
+$color:#c5c5c5;
+$bgcolor:rgb(118, 118, 118);
+
+
+
+@mixin grid2 ($color,$bgcolor){
+    color: $color;
+    background-color: $bgcolor;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    grid-template-areas: 
+    "posicionfotos1 posicionfotos2"
+    "footer footer"
+    ; 
+}

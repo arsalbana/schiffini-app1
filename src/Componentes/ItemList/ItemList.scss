@@ -1,16 +1,33 @@
 .contenedorListaComidas{
-    display: flex;
-    flex-direction: column;
+    color: #c5c5c5;
+    background-color: #767676;
+    width: 100%;
+    
     .textoComidas{
     
         .comidas{
             font-size:2em;
+            align-self: center;
+            
         }
     }
     .cardsComidas{
-        display: flex;
-        flex-direction: row;
+        width: 100%;
+        align-content: space-around;
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 30px;
+        grid-template-areas: 
+        
+        "textoComidas textoComidas textoComidas"
+        "cardsComidas cardsComidas cardsComidas"
+        "cardsComidas cardsComidas cardsComidas"
+        "cardsComidas cardsComidas cardsComidas"
+        "cardsComidas cardsComidas cardsComidas";
     }
+    
 }
     
 

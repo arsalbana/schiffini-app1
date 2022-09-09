@@ -1,0 +1,285 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+button {
+  font-family: quicksand; }
+
+.letra {
+  font-size: calc(10px + 0.8vw);
+  font-family: 'Quicksand';
+  text-decoration: none;
+  color: #252525; }
+
+.azul {
+  background-color: #0f001b; }
+
+.navbar-left {
+  max-width: 100%; }
+  .navbar-left .logo {
+    justify-items: flex-start;
+    position: initial; }
+  .navbar-left .navbar ul li a {
+    font-size: 1em; }
+  .navbar-left li {
+    list-style: none;
+    display: inline;
+    text-decoration: none; }
+    .navbar-left li a:link {
+      text-decoration: none;
+      color: #bbbbbb; }
+      .navbar-left li a:link a:visited {
+        text-decoration: none;
+        color: #bbbbbb; }
+      .navbar-left li a:link a:hover {
+        text-decoration: none;
+        color: #f3f3f3; }
+      .navbar-left li a:link a:active {
+        text-decoration: none;
+        color: #bbbbbb; }
+
+body {
+  background-color: #0f001b; }
+
+@media (max-width: 10px) {
+  .alinear {
+    width: 100%;
+    margin: 10px auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(11, auto);
+    gap: 10px;
+    grid-template-areas: "engrilla" "redondo"  "engrilla1"  "redondo1" "engrilla2" "redondo2"  "engrilla3"  "redondo3" "gradientes"  "gradientes" "footer"; }
+    .alinear .redondo {
+      grid-area: redondo;
+      padding: 5%; }
+    .alinear .engrilla {
+      grid-area: engrilla;
+      padding: 5%; }
+      .alinear .engrilla .letratexto {
+        font-family: 'Pacifico', cursive;
+        font-size: calc(8px + 1.5vw);
+        font-family: 'Pacifico';
+        padding-top: 5%; }
+    .alinear .engrilla1 {
+      grid-area: engrilla1;
+      padding: 5%; }
+      .alinear .engrilla1 .letratexto1 {
+        font-size: calc(8px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 5%; }
+    .alinear .redondo1 {
+      grid-area: redondo1;
+      padding: 5%; }
+    .alinear .redondo2 {
+      grid-area: redondo2;
+      padding: 5%; }
+    .alinear .engrilla2 {
+      grid-area: engrilla2;
+      padding: 5%; }
+      .alinear .engrilla2 .letratexto1 {
+        font-size: calc(8px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 5%; }
+    .alinear .engrilla3 {
+      grid-area: engrilla3;
+      padding: 5%; }
+      .alinear .engrilla3 .letratexto1 {
+        font-size: calc(8px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 5%; }
+    .alinear .redondo3 {
+      grid-area: redondo3;
+      padding: 5%; } }
+
+@media (min-width: 10px) and (max-width: 360px) {
+  .alinear {
+    width: 100%;
+    margin: 10px auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(11, auto);
+    gap: 10px;
+    grid-template-areas: "engrilla" "redondo"  "engrilla1"  "redondo1" "engrilla2" "redondo2"  "engrilla3"  "redondo3" "gradientes"  "gradientes" "footer"; }
+    .alinear .redondo {
+      grid-area: redondo;
+      padding: 5%; }
+    .alinear .engrilla {
+      grid-area: engrilla;
+      padding: 5%; }
+      .alinear .engrilla .letratexto {
+        font-family: 'Pacifico', cursive;
+        font-size: calc(12px + 1.5vw);
+        font-family: 'Pacifico';
+        padding-top: 5%; }
+    .alinear .engrilla1 {
+      grid-area: engrilla1;
+      padding: 5%; }
+      .alinear .engrilla1 .letratexto1 {
+        font-size: calc(12px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 5%; }
+    .alinear .redondo1 {
+      grid-area: redondo1;
+      padding: 5%; }
+    .alinear .redondo2 {
+      grid-area: redondo2;
+      padding: 5%; }
+    .alinear .engrilla2 {
+      grid-area: engrilla2;
+      padding: 5%; }
+      .alinear .engrilla2 .letratexto1 {
+        font-size: calc(12px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 5%; }
+    .alinear .engrilla3 {
+      grid-area: engrilla3;
+      padding: 5%; }
+      .alinear .engrilla3 .letratexto1 {
+        font-size: calc(12px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 5%; }
+    .alinear .redondo3 {
+      grid-area: redondo3;
+      padding: 5%; } }
+
+@media (min-width: 360px) and (max-width: 760px) {
+  .alinear {
+    width: 100%;
+    margin: 10px auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    grid-template-areas: "redondo engrilla" "engrilla1 redondo1" "redondo2 engrilla2" "engrilla3 redondo3" "gradientes gradientes" "footer footer"; }
+    .alinear .redondo {
+      grid-area: redondo;
+      padding: 5%; }
+    .alinear .engrilla {
+      grid-area: engrilla;
+      padding: 5%; }
+      .alinear .engrilla .letratexto {
+        font-family: 'Pacifico', cursive;
+        font-size: calc(12px + 1.5vw);
+        font-family: 'Pacifico';
+        padding-top: 20%; }
+    .alinear .engrilla1 {
+      grid-area: engrilla1;
+      padding: 5%; }
+      .alinear .engrilla1 .letratexto1 {
+        font-size: calc(12px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 20%; }
+    .alinear .redondo1 {
+      grid-area: redondo1;
+      padding: 5%; }
+    .alinear .redondo2 {
+      grid-area: redondo2;
+      padding: 5%; }
+    .alinear .engrilla2 {
+      grid-area: engrilla2;
+      padding: 5%; }
+      .alinear .engrilla2 .letratexto1 {
+        font-size: calc(12px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 20%; }
+    .alinear .engrilla3 {
+      grid-area: engrilla3;
+      padding: 5%; }
+      .alinear .engrilla3 .letratexto1 {
+        font-size: calc(12px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 20%; }
+    .alinear .redondo3 {
+      grid-area: redondo3;
+      padding: 5%; } }
+
+@media (min-width: 760px) and (max-width: 1600px) {
+  .alinear {
+    width: 100%;
+    margin: 10px auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    grid-template-areas: "redondo engrilla" "engrilla1 redondo1" "redondo2 engrilla2" "engrilla3 redondo3" "gradientes gradientes" "footer footer"; }
+    .alinear .redondo {
+      grid-area: redondo;
+      padding: 5%; }
+    .alinear .engrilla {
+      grid-area: engrilla;
+      padding: 5%; }
+      .alinear .engrilla .letratexto {
+        font-family: 'Pacifico', cursive;
+        font-size: calc(12px + 1.5vw);
+        font-family: 'Pacifico';
+        padding-top: 20%; }
+    .alinear .engrilla1 {
+      grid-area: engrilla1;
+      padding: 5%; }
+      .alinear .engrilla1 .letratexto1 {
+        font-size: calc(12px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 20%; }
+    .alinear .redondo1 {
+      grid-area: redondo1;
+      padding: 5%; }
+    .alinear .redondo2 {
+      grid-area: redondo2;
+      padding: 5%; }
+    .alinear .engrilla2 {
+      grid-area: engrilla2;
+      padding: 5%; }
+      .alinear .engrilla2 .letratexto1 {
+        font-size: calc(12px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 20%; }
+    .alinear .engrilla3 {
+      grid-area: engrilla3;
+      padding: 5%; }
+      .alinear .engrilla3 .letratexto1 {
+        font-size: calc(12px + 1vw);
+        font-family: 'Quicksand';
+        padding-top: 20%; }
+    .alinear .redondo3 {
+      grid-area: redondo3;
+      padding: 5%; } }
+
+.footer {
+  background-color: #0f001b;
+  grid-area: footer;
+  font-size: calc(6px + 0.8vw);
+  font-family: 'Quicksand';
+  text-decoration: none;
+  justify-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 10%; }
+  .footer h4 {
+    color: #0f001b; }
+
+li {
+  list-style: none;
+  display: inline;
+  text-decoration: none; }
+  li a:link {
+    text-decoration: none;
+    color: #bbbbbb; }
+  li a:visited {
+    text-decoration: none;
+    color: #bbbbbb; }
+  li a:hover {
+    text-decoration: none;
+    color: #f3f3f3; }
+  li a:active {
+    text-decoration: none;
+    color: #bbbbbb; }
+
+.logo {
+  justify-items: flex-start;
+  position: initial; }
