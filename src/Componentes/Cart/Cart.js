@@ -53,7 +53,7 @@ const pushData = async (newOrder) => {
 
     return(
         <>
-        <div>Carrito de checkout</div>
+        
         <h3>Resumen de pedido</h3>
         <div className='cart-widget' >
         {console.log("order:", order)}
@@ -84,7 +84,7 @@ const pushData = async (newOrder) => {
                                 <p> Total Productos:  {totalProducts}</p>
                 </div>
                 <div className='CartProductDetail'>
-                                <p> Precio total:  {totalPrice}</p>
+                                <p> Precio total: $ {totalPrice}</p>
                 </div>
 
                 {totalProducts > 0 ? <p>

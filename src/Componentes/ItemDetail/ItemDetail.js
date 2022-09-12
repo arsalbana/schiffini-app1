@@ -22,28 +22,31 @@ const ItemDetail = ({data, setShowModal, addProductToCart, productData})  => {
 
         <div className='itemDetail'>
 
-            <div className='columnaCuadros'>
-                <div className='fotoChica'><img className='imagenes' src={`/assets/${image}`}alt="imagen" onClick={() => setShowModal(true)} /></div>
-                
-                <div className='fotoChica'><img className='imagenes' src={`/assets/${image1}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`/assets/${image2}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`/assets/${image3}`} alt="imagen" /></div>
-                <div className='fotoChica'><img className='imagenes' src={`/assets/${image4}`} alt="imagen" /></div>
-            </div>
-
+            
 
             <div className='itemDetail1'>
 
-                <img className='imagenes' src={`/assets/${image}`} alt="imagen" />
+                <img className='imagenes' src={`/assets/${image}`} alt="imagen" onClick={() => setShowModal(true)} />
             </div> 
+            
+                
+            <div className='columnaCuadros'>
+                <div className='horizontal'>
+                    <div className='fotoChica'><img className='imagenes' src={`/assets/${image1}`} alt="imagen" /></div>
+                    <div className='fotoChica'><img className='imagenes' src={`/assets/${image2}`} alt="imagen" /></div>
+                </div>
+                <div className='horizontal'>
+                    <div className='fotoChica'><img className='imagenes' src={`/assets/${image3}`} alt="imagen" /></div>
+                    <div className='fotoChica'><img className='imagenes' src={`/assets/${image4}`} alt="imagen" /></div>
+                </div>
+                
+            </div>
+
             <div className='info'>   
                 <p>{title}</p>
                 <span>${precio}</span>
                 
                 {cantidadSeleccionada > 0 ? <button className='finalizar'><Link to="/cart">Finalizar Compra</Link></button> : <ItemCount onAdd={onAdd} initial={1} stock={stock}  setCantidadSeleccionada={setCantidadSeleccionada} productData={data} />}
-                
-                
-
 
 
 

@@ -1,11 +1,28 @@
-.CartProductIn{
-    img{
-        width: 7%;
-        height: auto;
+.cart-widget{
+    font-size: calc(5px + 1vw);
+    margin: 10%;
+    text-decoration: none;
+    .CartProductIn{
+        margin: 10%;
+        img{
+            width: 7%;
+            height: auto;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 15px;
+        
+        
     }
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 15px;
-    
+    .Subtotal{
+        button{
+            width: 30vw;
+            height: 3vw;
+            border-radius: 12px;
+            border-style: none;
+            font-size: 1.6vw;
+            background-color: aqua;
+        }
+    }
 }

@@ -1,12 +1,15 @@
+@import "variables";
+@import "mixin0";
+
 .itemDetail{
     width: 100%;
     height: auto;
     background-color: rgb(214, 250, 238);
     display: flex;
     flex-direction: row;
- 
-    font-size: 1rem;
+    font-size: calc(10px + 3vw);
     text-align: center;
+    align-content: space-around;
    
     
     .itemDetail1{
@@ -15,7 +18,7 @@
         
         align-self: center;
         .imagenes{
-            width: 20em;
+            width: 21vw;
             height: auto;
             border-radius: 12px;
         }
@@ -27,7 +30,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 1.3rem;
+        font-size: 1.5vw;
         padding: 2%;
         height: 100%;
         width: 5%;
@@ -35,46 +38,65 @@
         margin: 3%;
         margin-left: 5%;
         margin-top: 10%;
-        
+        p{
+            font-size: 2.5vw;
+            margin: 10%;
+        }
+        span{
+            font-size: 2.5vw;
+            margin: 10%;
+        }
         
         button.finalizar{
-            width: 6rem;
-            height: 1.5rem;
-            font-size: .6rem;
-            margin: 20%;
-            border-radius: 12px;
-            border-color: darkgray;
+            align-self: center;
+            font-size: 1vw;
+            font-weight: 400;
+            background-color: rgb(255, 255, 255);
+            width: 12vw;
+            height: 3vw;
+            font-weight: 600;
+            margin: 5%;
             text-decoration: none;
+            border-radius: 12px;
+
             
  
         }
     }
     
     .columnaCuadros{
-        margin: 4%;
-        padding-top: 1%;
-        width: 4em;
+
+        padding-top: 4.5%;
         height: auto;
         border-radius: 12px;
+        width: 30%;
         
-        .fotoChica{
-            
+        .horizontal{
             display: flex;
-            flex-direction: column;
-            margin: 1%;
-            border-radius: 12px;
-            .imagenes{
-                
-                border-radius: 12px;
-            }
+            flex-direction: row;
+           
+            .fotoChica{
             
+                display: flex;
+                flex-direction: column;
+                margin: 1%;
+                border-radius: 12px;
+                width: 35%;
+                .imagenes{
+                    
+                    border-radius: 12px;
+                }
+                
+            }
         }
+        
+        
 
     }
     .countProd{
         padding: 7%;
-        width: 200px;
-        height: 120px;
+        width: 15vw;
+        height: 10vw;
         border-radius: 12px;
         border-color: darkgray;
         margin: 3%;
@@ -84,6 +106,9 @@
             border-color: darkgray;
             margin: 3%;
             text-decoration: none;
+            width: 12vw;
+            
+           
             :active{
                 text-decoration: none;
             }
@@ -92,17 +117,25 @@
         }
         
         .contenedorCount{
+            font-size: 1vw;
             padding: 2%;
+            .buttonCount{
+                width: 3vw;
+                height: 3vw;
+                font-size: 2vw;
+            }
         }
         text-decoration: none;
     }
     .buttonPrimary{
         align-self: center;
-        font-size: .5em;
+        font-size: 1vw;
+        font-weight: 400;
         background-color: rgb(255, 255, 255);
-        width: 6rem;
-        height: 1.5rem;
-        font-weight: 500;
+        width: 12vw;
+        height: 3vw;
+        font-weight: 600;
         margin: 5%;
     }
 }
+@include media (md) {}
