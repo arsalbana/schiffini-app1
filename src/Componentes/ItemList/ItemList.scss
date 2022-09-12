@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixin0";
+
 .contenedorListaComidas{
     color: #c5c5c5;
     background-color: #767676;
@@ -18,7 +21,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 1fr);
-        gap: 30px;
+        gap: 20px;
         grid-template-areas: 
         
         "textoComidas textoComidas textoComidas"
@@ -30,4 +33,52 @@
     
 }
     
-
+@include media (sm) {
+    .contenedorListaComidas{
+        .cardsComidas{
+            width: 100%;
+            align-content: space-around;
+            
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(11, 1fr);
+            gap: 5px;
+            grid-template-areas: 
+            
+            "textoComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas";
+        }
+        
+    }
+}
+@include media (md) {
+    .contenedorListaComidas{
+        .cardsComidas{
+            width: 100%;
+            align-content: center;
+            
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 5px;
+            grid-template-areas: 
+            
+            "textoComidas textoComidas"
+            "cardsComidas cardsComidas"
+            "cardsComidas cardsComidas"
+            "cardsComidas cardsComidas"
+            "cardsComidas cardsComidas"
+            "cardsComidas cardsComidas";
+        }
+        
+    }
+}
