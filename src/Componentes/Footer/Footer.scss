@@ -1,3 +1,7 @@
+@import "variables";
+@import "mixin0";
+
+
 .foo{
   
     .item2{
@@ -17,14 +21,26 @@
         display: flex;
         flex-direction: column;
         gap: .5em;
-        padding-right: 20%;
+        padding-right: 10%;
       }
 
 
       .Redes{
         display: flex;
         flex-direction: column;
+        width: 30%;
+        height: auto;
+       svg{
+        width: 6vw;
+       }
       }
+      .containerDerecho{
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        font-size: calc(3px + 1vw);
+       
+    }
       li{
         button{
           background-color: #98fad4;
@@ -58,8 +74,22 @@
           min-width: 30px;
          
         }
+       
       
       }   
     }
     
 }  
+
+
+@include media (sm) {
+  .foo{
+    .containerDerecho{
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      font-size: calc(6px + 1vw);
+     
+  }
+  }
+}

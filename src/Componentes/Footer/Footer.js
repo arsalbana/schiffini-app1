@@ -10,6 +10,7 @@ const Footer= () => {
     return(
         <div className='foo'>
             
+            
             <ul className='item2'>
             <Link to='/'> <div className='logo'><img className='logob' src={image} alt='imagenLogo'/></div></Link>
 
@@ -28,13 +29,16 @@ const Footer= () => {
             </div>
             
             <div className='Redes'>
-                <li> <InstagramIcon/> </li>
-                <li> <FacebookIcon/> </li>
-                <li> <WhatsAppIcon/> </li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><li> <InstagramIcon/> </li></a>
+                
+                <a href="https://es-la.facebook.com" target="_blank" rel="noreferrer"><li> <FacebookIcon/> </li></a>
+                
+                <a href="https://web.whatsapp.com/" target="_blank" rel="noreferrer"><li> <WhatsAppIcon/> </li></a>
             </div>
             
-            <div className="container">
-            © Albana Schiffini 2022
+            <div className="containerDerecho">
+               © Albana Schiffini 2022
+            
             </div>
             
             </ul>
