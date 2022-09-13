@@ -2,10 +2,10 @@
 @import "mixin0";
 
 .container{
-    align-content: space-between;
+    align-content: center;
     
     .item{
-        padding-inline: 1em;
+        padding-inline: .5em;
         text-decoration: none;
         
         .imagenes{
@@ -22,29 +22,32 @@
             height: auto;
             padding: 5%;
             margin: 10px;
-            gap: 10px;
-            box-shadow: 3px;
+            
+            box-shadow: -3px 3px 10px rgb(198, 198, 198);
             border: 1px;
             text-align: center;
             align-items: center;
-            background-color: rgb(214, 250, 238);
+            background-color: rgb(253, 253, 251);
             border-radius: 12px;
             font-size: calc(1.2vw + 10px);
             
             
             
             
+            
+            
             button{
-                margin: 10%;
+                
                 color: white;
                 background-color: rgb(73, 33, 71);
                 border-width: 1px;
                 height: 30px;
-                width: 60%;
+                width: 100%;
                 box-shadow: 1px 1px rgb(46, 16, 77);
                 border-radius: 12px;
                 align-self: center;
                 font-size: calc(5px + 1vw);
+                margin-block: 1.5vw;
                 
     
             }
@@ -56,9 +59,10 @@
 }
 @include media (sm) {
     .container{
+        width: 60%;
         .item{
             .item1{
-                width: 90%;
+                width: 70%;
                 height: auto;
                 padding: 5%;
                 margin: 5px;
@@ -71,7 +75,7 @@
             }
             button{
                 
-                width: 60%;
+                width: 100%;
                 
             }
         }
@@ -94,10 +98,10 @@
                
             }
             button{
-                margin: 5%;
+                
                 border-width: 1px;
                 height: 30px;
-                width: 60%;
+                width: 80%;
                 
             }
         }

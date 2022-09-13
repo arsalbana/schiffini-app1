@@ -2,22 +2,26 @@
 @import "mixin0";
 
 .contenedorListaComidas{
-    color: #c5c5c5;
-    background-color: #767676;
+    color: #383838;
+    background-color: #ffffff;
     width: 100%;
     
     .textoComidas{
     
         .comidas{
-            font-size:2em;
+            font-size:calc(13px + 1vw);
             align-self: center;
+            margin-left: 1.5%;
             
         }
     }
     .cardsComidas{
         width: 100%;
         align-content: space-around;
-        
+        a{
+            text-decoration: none;
+            color: #383838;
+        }
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 1fr);
@@ -57,6 +61,15 @@
             "cardsComidas"
             "cardsComidas";
         }
+        .textoComidas{
+    
+            .comidas{
+                font-size:calc(14px + 1vw);
+                align-self: center;
+                margin-left: 7%;
+                
+            }
+        }
         
     }
 }
@@ -64,12 +77,13 @@
     .contenedorListaComidas{
         .cardsComidas{
             width: 100%;
+            height: auto;
             align-content: center;
             
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(5, 1fr);
-            gap: 5px;
+            gap: 2px;
             grid-template-areas: 
             
             "textoComidas textoComidas"
@@ -78,6 +92,15 @@
             "cardsComidas cardsComidas"
             "cardsComidas cardsComidas"
             "cardsComidas cardsComidas";
+        }
+        .textoComidas{
+    
+            .comidas{
+                font-size:calc(12px + 1vw);
+                align-self: center;
+                margin-left: 3.5%;
+                
+            }
         }
         
     }

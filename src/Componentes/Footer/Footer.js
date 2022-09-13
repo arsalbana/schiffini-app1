@@ -42,8 +42,7 @@ const Footer= () => {
             </div>
             
             </ul>
-            
-            
+          
         </div>
     )    
 }
