@@ -1,16 +1,16 @@
-
+import React from "react";
+import { NavbarWrapper } from "./styles/NavbarStyles";
 import './NavBar.scss';
 import {Link} from 'react-router-dom';
 import image from "../../image/logo con tipografia.png"
 import CartWidget from './CartWidget'
 
+function NavBarOpen({ open }) {
+  return (
+    <NavbarWrapper open={open}>
 
-
-const NavBar = () => {
-    
-    return(
         <div className='nav'>
-            
+                
             <ul className='items1'>
             <Link to='/'> <div className='logo'><img className='logoa' src={image} alt='imagenLogo'/></div></Link>
             
@@ -28,9 +28,12 @@ const NavBar = () => {
                 <button className='CartProductIn'><CartWidget /></button>
             </li>
             </ul>
-            
+    
 
         </div>
-    )    
+     
+    </NavbarWrapper>
+  );
 }
-export default NavBar
+
+export default NavBarOpen;
