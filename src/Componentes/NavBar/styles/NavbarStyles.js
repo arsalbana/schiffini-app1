@@ -3,12 +3,16 @@ import styled from "styled-components";
 export const NavbarWrapper = styled.nav
 
 ` div.nav{
-  width: 70%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
   
  
   ul.items1{
     font-family: 'Quicksand', sans-serif;
     list-style: none;
+    padding-top: 1vw;
+   
    
     
     li{
@@ -16,21 +20,28 @@ export const NavbarWrapper = styled.nav
         background-color: #fadd98;
         border-style: none;
         font-size: calc(.7vw + 10px);
+        padding-top: 1.5vw;
         .CartProductIn{
           align-self: center;
+          
         }
         
         
         .cart-widget{
           width: 90%;
           height: 90%;
-          padding-top: 10%;
+          align-content: center;
+          display: flex;
+          flex-direction: row-reverse;
+          gap: 10px;
+          
           
         }
         .boton{
           border-style: none;
           align-content: center;
           justify-content: center;
+          
           
           
         }
@@ -45,6 +56,7 @@ export const NavbarWrapper = styled.nav
           text-decoration: none;
           border-style: none;
           
+          
         }
       }
     }
@@ -53,7 +65,7 @@ export const NavbarWrapper = styled.nav
       .logoa{
         
         align-self: center;
-        width: 50%;
+        width: 40%;
         height: auto;
         min-width: 30px;
         max-width: 120px;
@@ -65,9 +77,7 @@ export const NavbarWrapper = styled.nav
   
 }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  
   position: fixed;
   width: 100%;
   height: 120px;
@@ -89,11 +99,15 @@ export const NavbarWrapper = styled.nav
     align-content: center;
     width: 100%;
   }
-
+  
   a {
-    padding: 1rem 1rem;
+    
     color: grey;
     text-decoration: none;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     
   }
+ 
 `;
