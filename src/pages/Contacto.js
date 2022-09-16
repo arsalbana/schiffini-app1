@@ -1,6 +1,14 @@
+import Contactanos from "../Componentes/ItemContacto/Contactanos"
+
+
 const Contacto = () => {
     return (
-        <h1>Contacto</h1>
+        <>
+            
+            <div>
+            <Contactanos /> 
+            </div>
+        </>
     )
 }
 

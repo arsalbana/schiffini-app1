@@ -54,7 +54,7 @@ const pushData = async (newOrder) => {
     return(
         <>
         
-        <h3>Resumen de pedido</h3>
+        <h3 className='resumenPedido'>Resumen de pedido</h3>
         <div className='cart-widget' >
         {console.log("order:", order)}
                 {cartProducts.map((product) => {
