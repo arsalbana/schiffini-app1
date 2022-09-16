@@ -7,15 +7,27 @@ const Nosotros1 = () => {
     
     
     return(
-        <Link to={`/`}><div className='item'>
-            <div className='ImagenNosotros'>
-                <img className='imagenes' src= {image} alt="imagen" />
-                
+        <>
+            <div>
+                <h1>
+                    Bienvenidos a Parrilla De Gauchos
+                </h1>
             </div>
-            
-            
-        </div></Link>
-        
+            <Link to={`/`}><div className='item'>
+                <div className='ImagenNosotros'>
+                    <img className='imagenes' src= {image} alt="imagen" />
+                    
+                </div>
+                
+            </div></Link>
+            <div className='divArriba'>
+                
+                <p>
+                    De Gauchos es una empresa familiar que lleva abierta 40 años.
+                    Nuestro restaurante es un espacio donde toda la familia puede disfrutar acompañada de la mejor parrilla Argentina.
+                </p>
+            </div>
+        </>
     )
 
 }

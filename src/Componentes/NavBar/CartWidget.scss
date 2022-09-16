@@ -1,12 +1,152 @@
+@import "variables";
+@import "mixin0";
+
 .CartProductIn{
+    
     img{
-        width: 15%;
+        width: 17%;
         height: auto;
     }
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    gap: 15px;
+    align-items:flex-end;
+    gap: 20px;
+    .CartProductDetail{
+        width: 100%;
+        
+        
+    }
     
+}
+.botonColumna{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    button.btn-delete-all{
+        width: 20vw;
+        height: 3vw;
+        background-color: rgb(73, 33, 71);
+        color: white;
+        border-radius: 12px;
+        border-style: none;
+    }
+    button.botonComprar{
+        width: 20vw;
+        height: 3vw;
+        background-color: rgb(73, 33, 71);
+        color: white;
+        border-radius: 12px;
+        border-style: none;
+    }
+}
+
+.MuiPaper-root{
+    width: 50%;
+    gap: 5px;
+    margin-right: 10%;
+    padding: 2%;
+}
+
+@include media (sm) {
+    .CartProductIn{
     
+        img{
+            width: 17%;
+            height: auto;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items:flex-end;
+        gap: 10px;
+        .CartProductDetail{
+            width: 100%;
+            font-size: small;
+            
+        }
+        
+    }
+    .botonColumna{
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        button.btn-delete-all{
+            width: 20vw;
+            height: 3vw;
+            background-color: rgb(73, 33, 71);
+            color: white;
+            border-radius: 12px;
+            border-style: none;
+        }
+        button.botonComprar{
+            width: 20vw;
+            height: 3vw;
+            background-color: rgb(73, 33, 71);
+            color: white;
+            border-radius: 12px;
+            border-style: none;
+        }
+    }
+    
+    .MuiPaper-root{
+        width: 50%;
+        gap: 5px;
+        margin-right: 10%;
+        padding: 2%;
+    }
+}
+
+@include media (md) {
+    .CartProductIn{
+        
+    
+        img{
+            width: 17%;
+            height: auto;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items:flex-end;
+        gap: 10px;
+        
+        .CartProductDetail{
+            width: 100%;
+            font-size: small;
+            
+        }
+        
+    }
+    .botonColumna{
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        button.btn-delete-all{
+            width: 40vw;
+            height: 6vw;
+            background-color: rgb(73, 33, 71);
+            color: white;
+            border-radius: 12px;
+            border-style: none;
+            font-size: small;
+            margin: 2%;
+        }
+        button.botonComprar{
+            width: 40vw;
+            height: 6vw;
+            background-color: rgb(73, 33, 71);
+            color: white;
+            border-radius: 12px;
+            border-style: none;
+            font-size: small;
+            margin: 2%;
+        }
+    }
+    
+    .MuiPaper-root{
+        width: 100%;
+        gap: 5px;
+        margin-right: 10%;
+        padding: 2%;
+        font-size: small;
+        align-content: stretch;
+    }
 }

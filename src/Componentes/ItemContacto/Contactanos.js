@@ -1,5 +1,6 @@
 
 import './Contactanos.scss';
+import image from './mapa1.png'
 
 
 
@@ -9,43 +10,35 @@ const Contactanos = () => {
      
     return(
       <> 
-        <div className="itemContacto">
-            <div>
-                    <h2>
-                        Contactanos
-                    </h2>
+        <div className='ContenedorContacto'>
+            <div className='sombra'>
+                <div className='ImagenContacto'>
+                    <img className='imagenContacto' src= {image} alt="imagen" />
+                            
                 </div>
-                <div className="inputtext">
-                    <h3>
-                        Nombre
-                    </h3>
-                    <input type="nombre" name="nombre"/>
-                </div>
-                <div className="inputtext">
-                    <h3>
-                        Apellido
-                    </h3>
-                    <input type="apellido" name="apellido"/>
-                </div>
-                <div className="inputtext">
-                    <h3>
-                        Mail
-                    </h3>
-                    <input type="mail" name="mail"/> 
-                </div>
-                <div className="comentarios">
-                    <h3>
-                        Comentarios
-                    </h3>
-                    <input type="Comentarios" name="comentarios"/>
-                </div>
-                <div className="button2">
+                <div className="itemContacto">
+                    <div>
+                            <h2>
+                                Como llegar
+                            </h2>
+                        </div>
+                        <div className="inputtext">
+                            <h3>
+                                Av Siempreviva 2233, Lomas de Zamora
+                            </h3>
+                            
+                        </div>
+                        <div className="inputtext">
+                            <h3>
+                                Teléfono de contacto: 
+                                1155111111
+                            </h3>
+                            
+                        </div>
                     
-                        <button type="submit">Enviar</button>
-                    
-                </div>
-            
 
+                </div>
+            </div>
         </div>
      </> 
     )

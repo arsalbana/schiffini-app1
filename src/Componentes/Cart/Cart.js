@@ -48,7 +48,7 @@ const pushData = async (newOrder) => {
     const collectionOrder = collection(db, 'Ordenes')
     const orderDoc = await addDoc(collectionOrder, newOrder)
     setSuccess(orderDoc.id)
-    console.log('orden generada: ', orderDoc)
+    console.log('orden generada: ', order)
 }
 
     return(
@@ -98,14 +98,19 @@ const pushData = async (newOrder) => {
                             
                             <h2>Su orden se genero con éxito</h2>
                             <p>ID de compra: {success}</p>
+                            
+                            
+                            
                         </>
                     ): (
-                        <form onSubmit={submitData}>
+                        <form className='form' onSubmit={submitData}>
                         
-                        <input type='text'name='name' placeholder ='nombre' order={formData.name} onChange={handleChange} />
-                        <input type='number'name='phone' placeholder = 'numero' order={formData.phone} onChange={handleChange} />
-                        <input type='email'name='email' placeholder = 'email' order={formData.email} onChange={handleChange} />
-                        <button type='submit'>Enviar</button>
+                        <input className='inputForm' type='text'name='name' placeholder ='Nombre completo' order={formData.name} onChange={handleChange} />
+                        <input className='inputForm' type='number'name='phone' placeholder = 'Número de teléfono' order={formData.phone} onChange={handleChange} />
+                        <input className='inputForm' type='email'name='email' placeholder = 'Email' order={formData.email} onChange={handleChange} />
+                        <input className='inputForm' type='address'name='address' placeholder = 'Dirección de envío' order={formData.address} onChange={handleChange} />
+                        
+                        <button className='botonEnviar' type='submit'>Enviar</button>
                         
                     </form>
                     )}
