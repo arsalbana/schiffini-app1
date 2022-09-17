@@ -1,15 +1,15 @@
-import ItemDetailContainer from "../Componentes/ItemDetailContainer/ItemDetailContainer"
-import "../Componentes/ItemDetail/ItemDetail.scss"
-
-
+import ItemListContainer from "../Componentes/ItemListContainer/ItemListContainer"
+import '../Componentes/ItemProduct/ItemProduct.scss'
 const Productos = () => {
     return (
         <>
-            <div className='ItemDetailContainer'>
-                <ItemDetailContainer />
+            
+            <div className='container'>
+                <div className='ItemListContainer'>
+                <ItemListContainer />
+                </div>
             </div>
         </>
     )
 }
-
 export default Productos

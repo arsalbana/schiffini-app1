@@ -1,15 +1,14 @@
-import ItemListContainer from "../Componentes/ItemListContainer/ItemListContainer"
-import '../Componentes/ItemProduct/ItemProduct.scss'
+import ItemListContainer from '../Componentes/ItemListContainer/ItemListContainer'
+
+
 const Home = () => {
     return (
         <>
-            
-            <div className='container'>
-                <div className='ItemListContainer'>
+            <div className='ItemListContainer'>
                 <ItemListContainer />
-                </div>
             </div>
         </>
     )
 }
+
 export default Home

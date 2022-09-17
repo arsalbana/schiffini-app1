@@ -4,8 +4,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import './Cart.scss';
 import {Link} from 'react-router-dom';
 import Modal from '../Modal/Modal';
-import db from '../../utils/firebaseConfigs.js';
-import {collection, addDoc} from 'firebase/firestore'
+import db from './../../utils/firebaseConfigs.js';
+import {collection, addDoc} from 'firebase/firestore';
+import image from './mapa zona entrega.png';
 
 const Cart = () => {
     
@@ -103,6 +104,7 @@ const pushData = async (newOrder) => {
                             
                         </>
                     ): (
+                        <div className='divFormZona'>
                         <form className='form' onSubmit={submitData}>
                         
                         <input className='inputForm' type='text'name='name' placeholder ='Nombre completo' order={formData.name} onChange={handleChange} />
@@ -111,8 +113,14 @@ const pushData = async (newOrder) => {
                         <input className='inputForm' type='address'name='address' placeholder = 'Dirección de envío' order={formData.address} onChange={handleChange} />
                         
                         <button className='botonEnviar' type='submit'>Enviar</button>
+
                         
                     </form>
+                    <div className='zonaDelivery'>
+                        <p>Zona de Delivery</p>
+                        <img className='imagenes' src={image} alt="imagen" />
+                    </div>
+                    </div>
                     )}
                    
                 </Modal>

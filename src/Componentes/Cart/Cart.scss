@@ -39,26 +39,50 @@ h3.resumenPedido{
 }
 
 .modal-custom{
-    .form{
-        align-content: space-between;
-        padding: 5%;
-        .inputForm{
-            justify-content: space-around;
-            display: flex;
-            flex-direction: column;
-            margin: 1vw;
-            width: 40vw;
-        }
-       button.botonEnviar{
-            margin: 1vw;
-            width: 30vw;
-            height: 3vw;
-            border-radius: 12px;
-            border-style: none;
-            font-size: small;
-            background-color: rgb(73, 33, 71);
-            color: white;
-       }
-    
+    h2{
+        margin-left: 6%;
+        margin-top: 10%;
     }
+    .divFormZona{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 60%;
+        .zonaDelivery{
+            margin-top: 4%;
+            p{
+                font-size: medium;
+            }
+            justify-content: space-around;
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                width: 80vw;
+                height: auto;
+        }
+        .form{
+            align-content: space-between;
+            padding: 5%;
+            .inputForm{
+                justify-content: space-around;
+                display: flex;
+                flex-direction: column;
+                margin: 1vw;
+                width: 30vw;
+                margin-top: 3vw;
+            }
+           button.botonEnviar{
+                margin: 1vw;
+                width: 30vw;
+                height: 3vw;
+                border-radius: 12px;
+                border-style: none;
+                font-size: small;
+                background-color: rgb(73, 33, 71);
+                color: white;
+           }
+        
+        }
+    }
+    
 }
