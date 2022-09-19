@@ -1,11 +1,11 @@
-import ItemListContainer from '../Componentes/ItemListContainer/ItemListContainer'
+import ItemListContainerHome from "../Componentes/ItemListContainerHome/ItemListContainerHome"
 
 
 const Home = () => {
     return (
         <>
             <div className='ItemListContainer'>
-                <ItemListContainer />
+                <ItemListContainerHome />
             </div>
         </>
     )

@@ -4,7 +4,7 @@ import {useState, useEffect } from "react"
 import '../ItemProduct/ItemProduct.scss'
 import { collection, getDocs, where, query, getFirestore } from "firebase/firestore"
 import { useParams } from "react-router-dom";
-import ItemProduct from "../ItemProduct/ItemProduct";
+
 
 
 

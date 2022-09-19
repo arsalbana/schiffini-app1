@@ -1,0 +1,107 @@
+@import "variables";
+@import "mixin0";
+
+.contenedorListaComidas1{
+    color: #383838;
+    background-color: #ffffff;
+    width: 100%;
+    
+    .textoComidas1{
+    
+        .comidas1{
+            font-size:calc(13px + 1vw);
+            align-self: center;
+            margin-left: 1.5%;
+            
+        }
+    }
+    .cardsComidas1{
+        width: 100%;
+        align-content: space-around;
+        a{
+            text-decoration: none;
+            color: #383838;
+        }
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 20px;
+        grid-template-areas: 
+        
+        "textoComidas textoComidas textoComidas"
+        "cardsComidas cardsComidas cardsComidas"
+        "cardsComidas cardsComidas cardsComidas"
+        "cardsComidas cardsComidas cardsComidas"
+        "cardsComidas cardsComidas cardsComidas";
+    }
+    
+}
+    
+@include media (sm) {
+    .contenedorListaComidas1{
+        .cardsComidas1{
+            width: 100%;
+            align-content: space-around;
+            
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(11, 1fr);
+            gap: 5px;
+            grid-template-areas: 
+            
+            "textoComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas"
+            "cardsComidas";
+        }
+        .textoComidas1{
+    
+            .comidas1{
+                font-size:calc(14px + 1vw);
+                align-self: center;
+                margin-left: 7%;
+                
+            }
+        }
+        
+    }
+}
+@include media (md) {
+    .contenedorListaComidas1{
+        .cardsComidas1{
+            width: 100%;
+            height: auto;
+            align-content: center;
+            
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 2px;
+            grid-template-areas: 
+            
+            "textoComidas textoComidas"
+            "cardsComidas cardsComidas"
+            "cardsComidas cardsComidas"
+            "cardsComidas cardsComidas"
+            "cardsComidas cardsComidas"
+            "cardsComidas cardsComidas";
+        }
+        .textoComidas1{
+    
+            .comidas1{
+                font-size:calc(12px + 1vw);
+                align-self: center;
+                margin-left: 3.5%;
+                
+            }
+        }
+        
+    }
+}

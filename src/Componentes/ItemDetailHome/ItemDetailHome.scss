@@ -1,0 +1,295 @@
+@import "variables";
+@import "mixin0";
+
+.itemDetailHome{
+    
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    font-size: calc(10px + 3vw);
+    text-align: center;
+    align-content: space-around;
+   
+    
+    .itemDetailHome1{
+        text-decoration: none;
+        margin: 5%;
+        
+        align-self: center;
+        .imagenes{
+            width: 21vw;
+            height: auto;
+            border-radius: 12px;
+        }
+        
+      
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5vw;
+        padding: 2%;
+        height: 100%;
+        width: 5%;
+        text-decoration: none;
+        margin: 3%;
+        margin-left: 5%;
+        margin-top: 10%;
+        p{
+            font-size: 2.5vw;
+            margin: 10%;
+        }
+        span{
+            font-size: 2.5vw;
+            margin: 10%;
+        }
+        
+        button.finalizar{
+            align-self: center;
+            font-size: 1vw;
+            background-color: rgb(255, 255, 255);
+            width: 12vw;
+            height: 3vw;
+            font-weight: 600;
+            margin: 5%;
+            text-decoration: none;
+            border-radius: 12px;
+
+            
+ 
+        }
+    }
+    
+    .columnaCuadros{
+
+        padding-top: 4.5%;
+        height: auto;
+        border-radius: 12px;
+        width: 30%;
+        
+        .horizontal{
+            display: flex;
+            flex-direction: row;
+           
+            .fotoChica{
+            
+                display: flex;
+                flex-direction: column;
+                margin: 1%;
+                border-radius: 12px;
+                width: 35%;
+                .imagenes{
+                    
+                    border-radius: 12px;
+                }
+                
+            }
+        }
+        
+        
+
+    }
+    .countProd{
+        padding: 7%;
+        width: 15vw;
+        height: 10vw;
+        border-radius: 12px;
+        border-color: darkgray;
+        margin: 3%;
+        
+        button{
+            border-radius: 12px;
+            border-color: darkgray;
+            margin: 3%;
+            text-decoration: none;
+            width: 12vw;
+            
+           
+            :active{
+                text-decoration: none;
+            }
+
+        
+        }
+        
+        .contenedorCount{
+            font-size: 1vw;
+            padding: 2%;
+            .buttonCount{
+                width: 3vw;
+                height: 3vw;
+                font-size: 2vw;
+            }
+        }
+        text-decoration: none;
+    }
+    .buttonPrimary{
+        align-self: center;
+        font-size: 1vw;
+        background-color: rgb(255, 255, 255);
+        width: 12vw;
+        height: 3vw;
+        font-weight: 600;
+        margin: 5%;
+    }
+}
+
+
+@include media (md) {
+    .itemDetailHome{
+       
+        
+        .info{
+            
+            p{
+                font-size: 4vw;
+                margin: 10%;
+            }
+            span{
+                font-size: 4vw;
+                margin: 10%;
+            }
+            
+            button.finalizar{
+                font-size: 1.8vw;
+                width: 20vw;
+                height: 6vw;
+                text-decoration: none;
+                :active{
+                    text-decoration: none;
+                }
+                
+    
+            }
+        }
+        
+      
+        .countProd{
+            padding: 7%;
+            width: 20vw;
+            height: 14vw;
+            margin: 3%;
+            
+            button{
+                margin: 3%;
+                text-decoration: none;
+                width: 16vw;
+                height: 4vw;
+                
+                :active{
+                    text-decoration: none;
+                }
+    
+            
+            }
+            
+            .contenedorCount{
+                font-size: 1vw;
+                
+                .buttonCount{
+                    width: 4vw;
+                    height: 4vw;
+                    font-size: 2.5vw;
+                    align-items: center;
+                }
+            }
+            text-decoration: none;
+        }
+        .buttonPrimary{
+            align-self: center;
+            font-size: 1.5vw;
+            width: 12vw;
+            height: 3vw;
+            margin: 5%;
+        }
+    }
+    
+}
+
+@include media(sm){
+    .itemDetailHome{
+      
+        
+        display: flex;
+        flex-direction: row;
+        font-size: calc(10px + 3vw);
+        gap: 5%;
+        
+        .itemDetailHome1{
+    
+            margin-left: 15%;
+            align-self: center;
+            width: 20vw;
+            height: auto;
+            text-decoration: none;
+           
+        }
+        
+        .info{
+            
+            p{
+                font-size: 4vw;
+                margin: 5%;
+            }
+            span{
+                font-size: 4vw;
+                margin: 10%;
+            }
+            
+            button.finalizar{
+                    font-size: 2vw;
+                    font-size: 2vw;
+                    width: 24vw;
+                    height: 5.5vw;
+                    text-decoration: none;
+                    :active{
+                        text-decoration: none;
+                    }
+        
+                }
+  
+        }
+       
+        
+        .columnaCuadros{
+            display: none;
+        }
+        .countProd{
+            padding: 6%;
+            width: 30vw;
+            height: 17vw;
+  
+
+            button{
+                font-size: 2vw;
+                width: 24vw;
+                height: 5.5vw;
+                
+                
+               
+                :active{
+                    text-decoration: none;
+                }
+    
+            
+            }
+            
+            .contenedorCount{
+                font-size: 1vw;
+                
+                .buttonCount{
+                    width: 6vw;
+                    height: 5vw;
+                    font-size: 4vw;
+                    
+                }
+            }
+            text-decoration: none;
+        }
+      
+    }
+}
