@@ -45,7 +45,7 @@ const ItemListContainerHome = () => {
             </div>
         
             <div className="itemCategory">
-                <Link to={`/productos/categoria`}> 
+                <Link to={`/productos`}> 
                     <div>
 
                     </div>
@@ -55,7 +55,7 @@ const ItemListContainerHome = () => {
                     
                     </div> 
                 </Link>
-                <Link to={`/productos/categoria`}> 
+                <Link to={`/productos`}> 
                     <div className="contenedorCategory">
                     <p className="Category">Guarniciones</p>
                     <img className='imagenes' src={imagen1} alt="imagen" />
@@ -63,7 +63,7 @@ const ItemListContainerHome = () => {
                     
                     </div> 
                 </Link>
-                <Link to={`/productos/categoria`}> 
+                <Link to={`/productos`}> 
                     <div className="contenedorCategory">
                     <p className="Category">Sanguches</p>
                     <img className='imagenes' src={imagen2} alt="imagen" />
