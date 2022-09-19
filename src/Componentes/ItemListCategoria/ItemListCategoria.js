@@ -1,4 +1,4 @@
-import ItemProduct from "../ItemProduct/ItemProduct";
+import ItemProductPromo from '../ItemProductPromo/ItemProductPromo';
 import './ItemListCategoria.scss';
 
 const ItemListCategoria = ({dataProducts}) => {
@@ -6,14 +6,14 @@ const ItemListCategoria = ({dataProducts}) => {
     return (
         <>
             
-            <div className="contenedorListaComidas1">
-                <div className="textoComidas1">
-                    <p className="comidas1">Nuestras comidas</p>
+            <div className="contenedorPromo">
+                <div className="textoPromo">
+                    <p className="Promo">Nuestras comidas</p>
                 </div>
                 
-                <div className="cardsComidas1">
+                <div className="cardPromo">
                 {dataProducts.map( (product) =>{
-                    return <ItemProduct key={product.id} data={product}/>
+                    return <ItemProductPromo key={product.id} data={product}/>
                     
                 })}
                 </div>

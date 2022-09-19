@@ -1,8 +1,8 @@
 import ItemListCategoria from "../ItemListCategoria/ItemListCategoria"
 import ItemListPromo from "../ItemListPromo/ItemListPromo"
 import {useState, useEffect } from "react"
-import '../ItemProduct/ItemProduct.scss';
-import '../ItemListCategoria/ItemListCategoria.scss';
+import './ItemListContainerHome.scss';
+import '../ItemProductPromo/ItemProductPromo.scss'
 import { collection, getDocs, where, query, getFirestore } from "firebase/firestore"
 import { useParams } from "react-router-dom";
 
@@ -35,13 +35,13 @@ const ItemListContainerHome = () => {
 
     return(
         <>
-            <div className="item">
+            <div className="itemHome">
                 
                 
                 <ItemListPromo dataProducts={data} />
             </div>
         
-            <div className="item">
+            <div className="itemHome">
                 
                 
                 <ItemListCategoria dataProducts={data} />

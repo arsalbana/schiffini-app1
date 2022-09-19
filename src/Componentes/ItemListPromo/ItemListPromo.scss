@@ -1,69 +1,95 @@
 @import "variables";
 @import "mixin0";
 
-.contenedorListaComidas1{
+.contenedorPromo{
+    
     color: #383838;
     background-color: #ffffff;
     width: 100%;
+    align-self: center;
     
-    .textoComidas1{
+    .textoPromo{
     
-        .comidas1{
+        .Promo{
             font-size:calc(13px + 1vw);
             align-self: center;
             margin-left: 1.5%;
             
         }
     }
-    .cardsComidas1{
-        width: 100%;
-        align-content: space-around;
+    .cardPromo{
+        width: 80%;
+        height: auto;
+        padding: 5%;
+        margin: 5px;
+        gap: 10px;
+        text-align: center;
+        align-content: center;
+        align-self: center;
+        border-radius: 12px;
+        font-size: calc(1.2vw + 10px);
+        box-shadow: -3px 3px 10px rgb(198, 198, 198);
+        border: 1px;
+        
+        button{
+                
+            color: white;
+            background-color: rgb(73, 33, 71);
+            border-width: 1px;
+            height: 30px;
+            width: 100%;
+            box-shadow: 1px 1px rgb(46, 16, 77);
+            border-radius: 12px;
+            align-self: center;
+            font-size: calc(5px + 1vw);
+            margin-block: 1.5vw;
+        }
+        
+        
+        
+        img{
+            width: 100%;
+            height: auto;
+            align-items: center;
+            border-radius: 12px;
+            
+        }
+        
         a{
             text-decoration: none;
             color: #383838;
         }
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         gap: 20px;
         grid-template-areas: 
         
-        "textoComidas textoComidas textoComidas"
-        "cardsComidas cardsComidas cardsComidas"
-        "cardsComidas cardsComidas cardsComidas"
-        "cardsComidas cardsComidas cardsComidas"
-        "cardsComidas cardsComidas cardsComidas";
+        "textoPromo textoPromo textoPromo"
+        "cardPromo cardPromo cardPromo"
+        ;
     }
     
 }
     
 @include media (sm) {
-    .contenedorListaComidas1{
-        .cardsComidas1{
-            width: 100%;
-            align-content: space-around;
-            
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(11, 1fr);
-            gap: 5px;
-            grid-template-areas: 
-            
-            "textoComidas"
-            "cardsComidas"
-            "cardsComidas"
-            "cardsComidas"
-            "cardsComidas"
-            "cardsComidas"
-            "cardsComidas"
-            "cardsComidas"
-            "cardsComidas"
-            "cardsComidas"
-            "cardsComidas";
+    .contenedorPromo{
+        width: 100%;
+        .cardPromo{
+            width: 70%;
+                height: auto;
+                padding: 5%;
+                margin: 5px;
+                gap: 10px;
+                text-align: center;
+                align-content: center;
+                align-self: center;
+                display: flex;
+                flex-direction: column;
         }
-        .textoComidas1{
+        .textoPromo{
     
-            .comidas1{
+            .Promo{
                 font-size:calc(14px + 1vw);
                 align-self: center;
                 margin-left: 7%;
@@ -74,28 +100,28 @@
     }
 }
 @include media (md) {
-    .contenedorListaComidas1{
-        .cardsComidas1{
-            width: 100%;
+    .contenedorPromo{
+        .cardPromo{
+            width: 90%;
             height: auto;
+            padding: 5%;
+            margin: 5px;
+            gap: 10px;
+            text-align: center;
             align-content: center;
-            
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(5, 1fr);
-            gap: 2px;
-            grid-template-areas: 
-            
-            "textoComidas textoComidas"
-            "cardsComidas cardsComidas"
-            "cardsComidas cardsComidas"
-            "cardsComidas cardsComidas"
-            "cardsComidas cardsComidas"
-            "cardsComidas cardsComidas";
+            display: flex;
+            flex-direction: column;
+            button{
+                
+                border-width: 1px;
+                height: 30px;
+                width: 100%;
+                
+            }
         }
-        .textoComidas1{
+        .textoPromo{
     
-            .comidas1{
+            .Promo{
                 font-size:calc(12px + 1vw);
                 align-self: center;
                 margin-left: 3.5%;

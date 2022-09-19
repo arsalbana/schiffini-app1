@@ -1,0 +1,109 @@
+@import "variables";
+@import "mixin0";
+
+.container{
+    align-content: center;
+    
+    .itemHome{
+        padding-inline: .5em;
+        text-decoration: none;
+        
+        .imagenes{
+            width: 100%;
+            height: auto;
+            align-items: center;
+            border-radius: 12px;
+            
+            }
+        
+        .card{
+            
+            width: 80%;
+            height: auto;
+            padding: 5%;
+            margin: 10px;
+            
+            box-shadow: -3px 3px 10px rgb(198, 198, 198);
+            border: 1px;
+            text-align: center;
+            align-items: center;
+            background-color: rgb(253, 253, 251);
+            border-radius: 12px;
+            font-size: calc(1.2vw + 10px);
+            
+            
+            
+            
+            
+            
+            button{
+                
+                color: white;
+                background-color: rgb(73, 33, 71);
+                border-width: 1px;
+                height: 30px;
+                width: 100%;
+                box-shadow: 1px 1px rgb(46, 16, 77);
+                border-radius: 12px;
+                align-self: center;
+                font-size: calc(5px + 1vw);
+                margin-block: 1.5vw;
+                
+    
+            }
+            
+            
+        }
+        
+    }
+}
+@include media (sm) {
+    .container{
+        width: 60%;
+        .itemHome{
+            .card{
+                width: 70%;
+                height: auto;
+                padding: 5%;
+                margin: 5px;
+                gap: 10px;
+                text-align: center;
+                align-content: center;
+                display: flex;
+                flex-direction: column;
+               
+            }
+            button{
+                
+                width: 100%;
+                
+            }
+        }
+    }
+}
+@include media (md) {
+    .container{
+        .itemHome{
+            
+            .card{
+                width: 90%;
+                height: auto;
+                padding: 5%;
+                margin: 5px;
+                gap: 10px;
+                text-align: center;
+                align-content: center;
+                display: flex;
+                flex-direction: column;
+               
+            }
+            button{
+                
+                border-width: 1px;
+                height: 30px;
+                width: 80%;
+                
+            }
+        }
+    }
+}
