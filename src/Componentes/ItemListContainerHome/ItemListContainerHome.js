@@ -1,11 +1,14 @@
-import ItemListCategoria from "../ItemListCategoria/ItemListCategoria"
+import './ItemListContainerHome.scss'
 import ItemListPromo from "../ItemListPromo/ItemListPromo"
 import {useState, useEffect } from "react"
 import './ItemListContainerHome.scss';
 import '../ItemProductPromo/ItemProductPromo.scss'
 import { collection, getDocs, where, query, getFirestore } from "firebase/firestore"
 import { useParams } from "react-router-dom";
-
+import {Link} from 'react-router-dom';
+import imagen from './aceitunas.png';
+import imagen1 from './achuras.png';
+import imagen2 from './achuras1.png';
 
 
 const ItemListContainerHome = () => {
@@ -41,10 +44,33 @@ const ItemListContainerHome = () => {
                 <ItemListPromo dataProducts={data} />
             </div>
         
-            <div className="itemHome">
+            <div className="itemCategory">
+                <Link to={`/productos/categoria`}> 
+                    <div>
+
+                    </div>
+                    <div className="contenedorCategory">
+                    <p className="Category">Parrilla</p>
+                    <img className='imagenes' src={imagen} alt="imagen" />
+                    
+                    </div> 
+                </Link>
+                <Link to={`/productos/categoria`}> 
+                    <div className="contenedorCategory">
+                    <p className="Category">Guarniciones</p>
+                    <img className='imagenes' src={imagen1} alt="imagen" />
+                    
+                    
+                    </div> 
+                </Link>
+                <Link to={`/productos/categoria`}> 
+                    <div className="contenedorCategory">
+                    <p className="Category">Sanguches</p>
+                    <img className='imagenes' src={imagen2} alt="imagen" />
+                    
+                    </div> 
+                </Link>
                 
-                
-                <ItemListCategoria dataProducts={data} />
             </div>
        </> 
     )

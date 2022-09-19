@@ -1,109 +1,122 @@
 @import "variables";
 @import "mixin0";
 
-.container{
-    align-content: center;
+.itemCategory{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas: 
+        
+    "textoCategory textoCategory textoCategory"
+     "imagenes imagenes imagenes"
+    ;
+    .contenedorCategory{
     
-    .item{
-        padding-inline: .5em;
+        color: #383838;
+        background-color: #ffffff;
+        width: 90%;
+        align-self: center;
         text-decoration: none;
+        height: auto;
+        text-align: center;
+        align-content: center;
+        border-radius: 12px;
+        font-size: calc(1.2vw + 10px);
+        box-shadow: -3px 3px 10px rgb(198, 198, 198);
+        border: 1px;
         
         .imagenes{
-            width: 100%;
+            width: 90%;
             height: auto;
             align-items: center;
             border-radius: 12px;
-            
-            }
-        
-        .item1{
-            
-            width: 80%;
-            height: auto;
-            padding: 5%;
-            margin: 10px;
-            
-            box-shadow: -3px 3px 10px rgb(198, 198, 198);
-            border: 1px;
-            text-align: center;
-            align-items: center;
-            background-color: rgb(253, 253, 251);
-            border-radius: 12px;
-            font-size: calc(1.2vw + 10px);
-            
-            
-            
-            
-            
-            
-            button{
-                
-                color: white;
-                background-color: rgb(73, 33, 71);
-                border-width: 1px;
-                height: 30px;
-                width: 100%;
-                box-shadow: 1px 1px rgb(46, 16, 77);
-                border-radius: 12px;
-                align-self: center;
-                font-size: calc(5px + 1vw);
-                margin-block: 1.5vw;
-                
-    
-            }
-            
             
         }
+        
+        a{
+            text-decoration: none;
+            color: #383838;
+        }
+            
+        
+        .Category{
+            font-size:calc(13px + 1vw);
+            align-self: center;
+            margin-left: 1.5%;
+             
+        }
+       
+    }
+}
+
+    
+@include media (sm) {
+.itemCategory{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+     gap: 20px;
+    grid-template-areas: 
+     
+     "imagenes"
+     "imagenes"
+     "imagenes"
+     
+    ;
+    .contenedorCategory{
+        width: 100%;
+        height: auto;
+        padding: 5%;
+        margin: 5px;
+        gap: 10px;
+        text-align: center;
+        align-content: center;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        
+        .Category{
+            font-size:calc(14px + 1vw);
+            align-self: center;
+            margin-left: 7%;
+                
+        }
+        
         
     }
 }
-@include media (sm) {
-    .container{
-        width: 60%;
-        .item{
-            .item1{
-                width: 70%;
-                height: auto;
-                padding: 5%;
-                margin: 5px;
-                gap: 10px;
-                text-align: center;
-                align-content: center;
-                display: flex;
-                flex-direction: column;
-               
-            }
-            button{
-                
-                width: 100%;
-                
-            }
-        }
-    }
 }
 @include media (md) {
-    .container{
-        .item{
+.itemCategory{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-areas: 
+         
+     "imagenes"
+     "imagenes"
+     "imagenes"
+         
+    ;
+    .contenedorCategory{
+        width: 90%;
+        height: auto;
+        padding: 5%;
+        margin: 5px;
+        gap: 10px;
+        text-align: center;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        .Category{
+            font-size:calc(12px + 1vw);
+            align-self: center;
+            margin-left: 3.5%;
             
-            .item1{
-                width: 90%;
-                height: auto;
-                padding: 5%;
-                margin: 5px;
-                gap: 10px;
-                text-align: center;
-                align-content: center;
-                display: flex;
-                flex-direction: column;
-               
-            }
-            button{
-                
-                border-width: 1px;
-                height: 30px;
-                width: 80%;
-                
-            }
         }
+        
     }
+}
 }
