@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetailHome = ({data, setShowModal, addProductToCart, productData})  => {
-    const {title, precio, stock, image } = data
+    const {title, precio, stock, image, descripcion } = data
 
     const [cantidadSeleccionada, setCantidadSeleccionada] = useState()
 
@@ -36,10 +36,14 @@ const ItemDetailHome = ({data, setShowModal, addProductToCart, productData})  =>
                 <p>{title}</p>
                 <span>${precio}</span>
                 
+                
                 {cantidadSeleccionada > 0 ? <button className='finalizar'><Link to="/cart">Finalizar Compra</Link></button> : <ItemCount onAdd={onAdd} initial={1} stock={stock}  setCantidadSeleccionada={setCantidadSeleccionada} productData={data} />}
 
 
 
+            </div>
+            <div>
+                <p className='descripcionPromo'>{descripcion}</p>
             </div>
             
     

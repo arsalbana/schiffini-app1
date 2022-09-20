@@ -11,7 +11,7 @@ import Productos from './pages/Productos';
 import Details from './pages/Details';
 import DetailPromo from './pages/DetailPromo';
 import Checkout from './pages/Checkout';
-import ItemList from './Componentes/ItemList/ItemList';
+import ItemListCategoria from './Componentes/ItemListCategoria/ItemListCategoria';
 import Header from './Componentes/NavBar/Header';
 
 
@@ -33,7 +33,7 @@ function App() {
               <Route path='/productos' element={<Productos />} />
               <Route path='/:category/:id' element={<Details />} />
               <Route path='/:id' element={<DetailPromo />} />
-              <Route path='/productos :lista/:category' element={<ItemList />} />
+              <Route path='/productos/:lista/:category' element={<ItemListCategoria />} />
               <Route path='/cart' element={<Checkout />}/>
               <Route path='*' element={<h1>Error 404- not found</h1>} />
               

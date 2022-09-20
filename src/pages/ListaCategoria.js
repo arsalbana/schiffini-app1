@@ -1,8 +1,8 @@
-import ItemList from "../Componentes/ItemList/ItemList"
+import ItemListCategoria from "../Componentes/ItemListCategoria/ItemListCategoria"
 
 const ListaCategoria = () => {
     return(
-        <ItemList/>
+        <ItemListCategoria/>
     )
 }
 export default ListaCategoria

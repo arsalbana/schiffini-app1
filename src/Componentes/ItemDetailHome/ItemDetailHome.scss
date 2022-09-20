@@ -11,6 +11,12 @@
     font-size: calc(10px + 3vw);
     text-align: center;
     align-content: space-around;
+    .descripcionPromo{
+        font-size: calc(8px + 1vw);
+        width: 30%;
+        margin-top: 30%;
+        margin-left: 30%;
+    }
    
     
     .itemDetailHome1{
@@ -141,27 +147,40 @@
 
 @include media (md) {
     .itemDetailHome{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        .descripcionPromo{
+            font-size: calc(10px + 1vw);
+            width: 50%;
+            margin-top: 2%;
+            text-align: center;
+            margin-left: 25%;
+           
+            
+        }
        .itemDetailHome1{
         .imagenes{
             width: 35vw;
             height: auto;
             border-radius: 12px;
             margin-top: 15%;
-            margin: 5%;
+            
             
         }
        }
         
         .info{
-            margin-left: 15%;
+            align-self: center;
+            margin-top: .1%;
             
             p{
                 font-size: calc(12px + 1vw);
-                margin: 10%;
+                margin-top: .2%;
             }
             span{
                 font-size: calc(12px + 1vw);
-                margin: 10%;
+                margin-top: 5%;
             }
             
             button.finalizar{
@@ -222,42 +241,45 @@
 
 @include media(sm){
     .itemDetailHome{
-        .itemDetailHome1{
-            .imagenes{
-                width: 35vw;
-                height: auto;
-                border-radius: 12px;
-                margin-top: 35%;
-                margin: 5%;
-            }
-           }
-      
-        
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-content: center;
         font-size: calc(10px + 3vw);
         gap: 5%;
-        
-        .itemDetailHome1{
-    
-            margin-left: 15%;
-            align-self: center;
-            width: 20vw;
-            height: auto;
-            text-decoration: none;
+        .descripcionPromo{
+            font-size: calc(10px + 1vw);
+            width: 60%;
+            margin-top: .1%;
+            text-align: center;
+            margin-left: 20%;
+            margin-bottom: 20%;
            
+            
         }
+        .itemDetailHome1{
+            .imagenes{
+                width: 80%;
+                height: auto;
+                border-radius: 12px;
+                margin-top: 5%;
+                text-decoration: none;
+                align-self: center;
+            }
+        }
+           
         
         .info{
-            margin-left: 30%;
+            
+            align-self: center;
+            margin-top: 0px;
             
             p{
                 font-size: 4vw;
-                margin: 5%;
+                margin: 1%;
             }
             span{
                 font-size: 4vw;
-                margin: 10%;
+                margin: 1%;
             }
             
             button.finalizar{
