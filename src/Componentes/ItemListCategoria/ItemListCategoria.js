@@ -8,7 +8,7 @@ const ItemListCategoria = ({dataProducts}) => {
             
             <div className="contenedorPromo">
                 <div className="textoPromo">
-                    <p className="Promo">Nuestras comidas</p>
+                    <p className="Promo">Categorías de productos</p>
                 </div>
                 
                 <div className="cardPromo">

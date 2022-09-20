@@ -1,14 +1,14 @@
 import './ItemListContainerHome.scss'
-import ItemListPromo from "../ItemListPromo/ItemListPromo"
+import ItemListPromo from "../ItemListPromo/ItemListPromo";
 import {useState, useEffect } from "react"
 import './ItemListContainerHome.scss';
 import '../ItemProductPromo/ItemProductPromo.scss'
 import { collection, getDocs, where, query, getFirestore } from "firebase/firestore"
 import { useParams } from "react-router-dom";
 import {Link} from 'react-router-dom';
-import imagen from './aceitunas.png';
-import imagen1 from './achuras.png';
-import imagen2 from './achuras1.png';
+import imagen from './parrillada imagen ppal.png';
+import imagen1 from './ensalada ppal.png';
+import imagen2 from './bondiola ppal.png';
 
 
 const ItemListContainerHome = () => {
@@ -45,10 +45,9 @@ const ItemListContainerHome = () => {
             </div>
         
             <div className="itemCategory">
+                
                 <Link to={`/productos`}> 
-                    <div>
-
-                    </div>
+                    
                     <div className="contenedorCategory">
                     <p className="Category">Parrilla</p>
                     <img className='imagenes' src={imagen} alt="imagen" />

@@ -1,9 +1,13 @@
 @import "variables";
 @import "mixin0";
 
+.itemHome{
+    height: 15vw;
+    
+}
 .itemCategory{
-    height: 70vw;
-    margin-top: 30%;
+    height: 30vw;
+    margin-top: 35%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -13,49 +17,59 @@
     "textoCategory textoCategory textoCategory"
      "imagenes imagenes imagenes"
     ;
-    .contenedorCategory{
     
-        color: #383838;
-        background-color: #ffffff;
-        width: 90%;
-        
-        align-self: center;
-        text-decoration: none;
-        height: auto;
-        text-align: center;
-        align-content: center;
-        border-radius: 12px;
-        font-size: calc(1.2vw + 10px);
-        box-shadow: -3px 3px 10px rgb(198, 198, 198);
-        border: 1px;
-        
-        .imagenes{
-            width: 90%;
-            height: auto;
-            align-items: center;
-            border-radius: 12px;
-            
-        }
         
         a{
             text-decoration: none;
             color: #383838;
+            .contenedorCategory{
+    
+                color: #383838;
+                background-color: #ffffff;
+                width: 90%;
+                text-decoration: none;
+                align-self: center;
+                
+                height: auto;
+                text-align: center;
+                align-content: center;
+                border-radius: 12px;
+                font-size: calc(1.2vw + 10px);
+                box-shadow: -3px 3px 10px rgb(198, 198, 198);
+                border: 1px;
+                
+                .imagenes{
+                    width: 90%;
+                    height: auto;
+                    align-items: center;
+                    border-radius: 12px;
+                    
+                }
+                .Category{
+                    font-size:calc(13px + 1vw);
+                    align-self: center;
+                    
+                    text-decoration: none;
+                     
+                }
         }
             
         
-        .Category{
-            font-size:calc(13px + 1vw);
-            align-self: center;
-            margin-left: 1.5%;
-             
-        }
+       
        
     }
 }
 
     
 @include media (sm) {
+.itemHome{
+    height: auto;
+    width: 100%;
+        
+}
 .itemCategory{
+    height: auto;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -67,35 +81,45 @@
      "imagenes"
      
     ;
-    .contenedorCategory{
-        width: 100%;
-        height: auto;
-        padding: 5%;
-        margin: 5px;
-        gap: 10px;
-        text-align: center;
-        align-content: center;
-        align-self: center;
-        display: flex;
-        flex-direction: column;
-        
-        .Category{
-            font-size:calc(14px + 1vw);
+    a{
+        .contenedorCategory{
+            width: 100%;
+            height: auto;
+            padding: 5%;
+            margin: 5px;
+            gap: 10px;
+            text-align: center;
+            align-content: center;
             align-self: center;
-            margin-left: 7%;
+            display: flex;
+            flex-direction: column;
+            
+            .Category{
+                font-size:calc(14px + 1vw);
+                align-self: center;
                 
+                    
+            }
+            
+            
         }
-        
-        
     }
+   
 }
 }
 @include media (md) {
+.itemHome{
+    height: auto;
+     width: 100%;
+            
+}
 .itemCategory{
+    height: auto;
+    width: 95%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px;
     grid-template-areas: 
          
      "imagenes"
@@ -103,23 +127,26 @@
      "imagenes"
          
     ;
-    .contenedorCategory{
-        width: 90%;
-        height: auto;
-        padding: 5%;
-        margin: 5px;
-        gap: 10px;
-        text-align: center;
-        align-content: center;
-        display: flex;
-        flex-direction: column;
-        .Category{
-            font-size:calc(12px + 1vw);
-            align-self: center;
-            margin-left: 3.5%;
+    a{
+        .contenedorCategory{
+            width: 90%;
+            height: auto;
+            padding: 5%;
+            margin: 5px;
+            gap: 10px;
+            text-align: center;
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            .Category{
+                font-size:calc(12px + 1vw);
+                align-self: center;
+                
+                
+            }
             
         }
-        
     }
+   
 }
 }

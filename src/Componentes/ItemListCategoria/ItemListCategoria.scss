@@ -8,6 +8,8 @@
     width: 100%;
     height: 55vw;
     align-self: center;
+    margin-bottom: 5%;
+    justify-content: space-around;
     
     .textoPromo{
     
@@ -15,6 +17,7 @@
             font-size:calc(13px + 1vw);
             align-self: center;
             margin-left: 1.5%;
+            margin-top: 5%;
             
         }
     }
@@ -104,6 +107,7 @@
 @include media (md) {
     .contenedorPromo{
         height: auto;
+        width: 100%;
         .cardPromo{
             width: 90%;
             height: auto;

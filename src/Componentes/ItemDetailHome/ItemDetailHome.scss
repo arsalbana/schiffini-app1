@@ -19,7 +19,7 @@
         
         align-self: center;
         .imagenes{
-            width: 21vw;
+            width: 30vw;
             height: auto;
             border-radius: 12px;
         }
@@ -141,16 +141,26 @@
 
 @include media (md) {
     .itemDetailHome{
-       
+       .itemDetailHome1{
+        .imagenes{
+            width: 35vw;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 15%;
+            margin: 5%;
+            
+        }
+       }
         
         .info{
+            margin-left: 15%;
             
             p{
-                font-size: 4vw;
+                font-size: calc(12px + 1vw);
                 margin: 10%;
             }
             span{
-                font-size: 4vw;
+                font-size: calc(12px + 1vw);
                 margin: 10%;
             }
             
@@ -212,6 +222,15 @@
 
 @include media(sm){
     .itemDetailHome{
+        .itemDetailHome1{
+            .imagenes{
+                width: 35vw;
+                height: auto;
+                border-radius: 12px;
+                margin-top: 35%;
+                margin: 5%;
+            }
+           }
       
         
         display: flex;
@@ -230,6 +249,7 @@
         }
         
         .info{
+            margin-left: 30%;
             
             p{
                 font-size: 4vw;

@@ -8,7 +8,7 @@ const ItemListPromo = ({dataProducts}) => {
             
             <div className="contenedorPromo">
                 <div className="textoPromo">
-                    <p className="Promo">Nuestras comidas</p>
+                    <p className="Promo">Promociones</p>
                 </div>
                 
                 <div className="cardPromo">

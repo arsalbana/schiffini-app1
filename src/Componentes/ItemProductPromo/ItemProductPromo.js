@@ -10,8 +10,7 @@ const ItemProductPromo = ({data}) => {
         <Link to={`/${id}`}><div className='itemHome'>
             <div className='card'>
                 <img className='img' src={imagen} alt="imagen" />
-                <p>{title}</p>
-                <span>$ {precio}</span>
+                
                 <button>
                     Ver producto
                 </button>
