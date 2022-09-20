@@ -33,7 +33,7 @@ const ItemDetailContainer= () => {
         const docSnapshot = await getDoc(docRef)
         let product = docSnapshot.data()
         product.id = docSnapshot.id
-        console.log('data con id', product)
+        
         return product
   
     }

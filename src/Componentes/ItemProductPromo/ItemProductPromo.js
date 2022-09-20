@@ -3,7 +3,7 @@ import './ItemProductPromo.scss'
 import {Link} from 'react-router-dom';
 
 const ItemProductPromo = ({data}) => {
-    const {title, precio, imagen, id, category} = data
+    const {imagen, id} = data
 
     
     return(

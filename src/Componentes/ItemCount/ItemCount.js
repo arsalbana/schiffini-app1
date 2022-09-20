@@ -9,8 +9,6 @@ const ItemCount = ({ stock, initial, setCantidadSeleccionada, productData }) => 
   
   const onAdd = () => {
     console.log("Agregar al carrito: ", contador)
-    console.log("info producto", productData)
-    
     
     addProductToCart(productData, contador)
     setCantidadSeleccionada(contador)

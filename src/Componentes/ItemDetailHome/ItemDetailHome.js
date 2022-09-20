@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetailHome = ({data, setShowModal, addProductToCart, productData})  => {
-    const {title, precio, imagen, stock, id, image } = data
+    const {title, precio, stock, image } = data
 
     const [cantidadSeleccionada, setCantidadSeleccionada] = useState()
 
@@ -41,7 +41,7 @@ const ItemDetailHome = ({data, setShowModal, addProductToCart, productData})  =>
 
 
             </div>
-            {console.log("cant selecc ..", cantidadSeleccionada)}
+            
     
 
         </div>

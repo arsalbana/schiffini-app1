@@ -36,7 +36,7 @@ const Cart = () => {
 const handleChange = (e) =>{
     console.log("valor name", e.target.name)
     setFormData ({ ...formData, [e.target.name] : e.target.value })
-    console.log("formData", formData)
+    
 }
 
 const submitData = (e) => {
@@ -49,7 +49,7 @@ const pushData = async (newOrder) => {
     const collectionOrder = collection(db, 'Ordenes')
     const orderDoc = await addDoc(collectionOrder, newOrder)
     setSuccess(orderDoc.id)
-    console.log('orden generada: ', order)
+    
 }
 
     return(
@@ -57,7 +57,7 @@ const pushData = async (newOrder) => {
         
         <h3 className='resumenPedido'>Resumen de pedido</h3>
         <div className='cart-widget' >
-        {console.log("order:", order)}
+        
                 {cartProducts.map((product) => {
                     return(
                         <div className='CartProductIn' key={product.id}>

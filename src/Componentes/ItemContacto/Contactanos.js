@@ -12,10 +12,7 @@ const Contactanos = () => {
       <> 
         <div className='ContenedorContacto'>
             <div className='sombra'>
-                <div className='ImagenContacto'>
-                    <img className='imagenContacto' src= {image} alt="imagen" />
-                            
-                </div>
+               
                 <div className="itemContacto">
                     <div>
                             <h2>
@@ -37,6 +34,10 @@ const Contactanos = () => {
                         </div>
                     
 
+                </div>
+                <div className='ImagenContacto'>
+                    <img className='imagenContacto' src= {image} alt="imagen" />
+                            
                 </div>
             </div>
         </div>
