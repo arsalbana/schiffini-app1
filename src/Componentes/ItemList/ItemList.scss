@@ -5,6 +5,8 @@
     color: #383838;
     background-color: #ffffff;
     width: 100%;
+    height: auto;
+    
     
     .textoComidas{
     
@@ -39,6 +41,7 @@
     
 @include media (sm) {
     .contenedorListaComidas{
+       
         .cardsComidas{
             width: 100%;
             align-content: space-around;
@@ -75,6 +78,7 @@
 }
 @include media (md) {
     .contenedorListaComidas{
+        
         .cardsComidas{
             width: 100%;
             height: auto;
