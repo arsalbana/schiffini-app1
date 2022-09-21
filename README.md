@@ -1,3 +1,10 @@
+E-commerce creado con React js, Sass, html y js.
+
+![Enlace a funcionamiento de la app por medio de gif]
+(https://raw.githubusercontent.com/arsalbana/schiffini-app1/master/public/ReactGif.gif)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
